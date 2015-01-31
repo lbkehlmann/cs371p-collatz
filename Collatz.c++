@@ -35,8 +35,10 @@ pair<int, int> collatz_read (const string& s) {
 
 int collatz_eval (int i, int j) {
     // <your code>
+    assert i >= 1;
+    assert j < 1000000;
     int steps = 1;
-    int max = 0;
+    int max = steps;
     for(int start = i; start <= j; start++) {
 	int k = start;
 	steps = 1;
@@ -51,6 +53,7 @@ int collatz_eval (int i, int j) {
 	if(steps > max)
 	    max = steps;
     }    
+    assert max > 0;
     return max;
 
 //return 1;
