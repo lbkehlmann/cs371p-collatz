@@ -229,9 +229,9 @@
         -:  224:  return operand1_printer(str);\
         -:  225:}
         -:  226:
-function _ZN7testing8internal33FormatForComparisonFailureMessageEPKcRKSs called 2 returned 100% blocks executed 100%
-        2:  227:GTEST_FORMAT_IMPL_(::std::string, String::ShowCStringQuoted)
-call    0 returned 100%
+function _ZN7testing8internal33FormatForComparisonFailureMessageEPKcRKSs called 0 returned 0% blocks executed 0%
+    #####:  227:GTEST_FORMAT_IMPL_(::std::string, String::ShowCStringQuoted)
+call    0 never executed
         -:  228:#if GTEST_HAS_STD_WSTRING
         -:  229:GTEST_FORMAT_IMPL_(::std::wstring, String::ShowWideCStringQuoted)
         -:  230:#endif  // GTEST_HAS_STD_WSTRING
@@ -1170,8 +1170,8 @@ call   77 never executed
         -:  934:
         -:  935:typedef char IsNotContainer;
         -:  936:template <class C>
-function _ZN7testing8internal15IsContainerTestIiEEcl called 8 returned 100% blocks executed 100%
-        8:  937:IsNotContainer IsContainerTest(long /* dummy */) { return '\0'; }
+function _ZN7testing8internal15IsContainerTestIiEEcl called 0 returned 0% blocks executed 0%
+    #####:  937:IsNotContainer IsContainerTest(long /* dummy */) { return '\0'; }
         -:  938:
         -:  939:// EnableIf<condition>::type is void when 'Cond' is true, and
         -:  940:// undefined when 'Cond' is false.  To use SFINAE to make a function

@@ -35,7 +35,27 @@ pair<int, int> collatz_read (const string& s) {
 
 int collatz_eval (int i, int j) {
     // <your code>
-    return 1;}
+    int steps = 1;
+    int max = 0;
+    for(int start = i; start <= j; start++) {
+	int k = start;
+	steps = 1;
+	while(k > 1){
+	    if(k % 2 == 0){
+		k = k / 2;
+	    } else {
+		k = 3*k + 1;
+	    }
+	    steps++;
+	}
+	if(steps > max)
+	    max = steps;
+    }    
+    return max;
+
+//return 1;
+}
+
 
 // -------------
 // collatz_print

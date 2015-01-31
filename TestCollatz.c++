@@ -107,14 +107,14 @@ TEST(Collatz, solve_1) {
     istringstream r("1 999999\n");
     ostringstream w;
     collatz_solve(r, w);
-    ASSERT_EQ("1 999999 258\n", w.str());
+    ASSERT_EQ("1 999999 476\n", w.str());
 }
 
 TEST(Collatz, solve_2) {
     istringstream r("1 2\n");
     ostringstream w;
     collatz_solve(r, w);
-    ASSERT_EQ("1 2 1\n", w.str()); 
+    ASSERT_EQ("1 2 2\n", w.str()); 
 }
 
 /*

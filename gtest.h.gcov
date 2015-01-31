@@ -288,20 +288,20 @@ function _ZNK7testing15AssertionResultcvbEv called 16 returned 100% blocks execu
         -:  280:  // use it when they fail (i.e., the predicate's outcome doesn't match the
         -:  281:  // assertion's expectation). When nothing has been streamed into the
         -:  282:  // object, returns an empty string.
-function _ZNK7testing15AssertionResult7messageEv called 6 returned 100% blocks executed 86%
-        6:  283:  const char* message() const {
-        6:  284:    return message_.get() != NULL ?  message_->c_str() : "";
-call    0 returned 100%
-branch  1 taken 100% (fallthrough)
-branch  2 taken 0%
-call    3 returned 100%
-call    4 returned 100%
+function _ZNK7testing15AssertionResult7messageEv called 0 returned 0% blocks executed 0%
+    #####:  283:  const char* message() const {
+    #####:  284:    return message_.get() != NULL ?  message_->c_str() : "";
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+call    3 never executed
+call    4 never executed
         -:  285:  }
         -:  286:  // TODO(vladl@google.com): Remove this after making sure no clients use it.
         -:  287:  // Deprecated; please use message() instead.
-function _ZNK7testing15AssertionResult15failure_messageEv called 6 returned 100% blocks executed 100%
-        6:  288:  const char* failure_message() const { return message(); }
-call    0 returned 100%
+function _ZNK7testing15AssertionResult15failure_messageEv called 0 returned 0% blocks executed 0%
+    #####:  288:  const char* failure_message() const { return message(); }
+call    0 never executed
         -:  289:
         -:  290:  // Streams a custom failure message into this object.
         -:  291:  template <typename T> AssertionResult& operator<<(const T& value) {
@@ -1331,16 +1331,16 @@ call    4 never executed
         -: 1295:// INTERNAL IMPLEMENTATION - DO NOT USE IN A USER PROGRAM.
         -: 1296:template <typename T1, typename T2>
 function _ZN7testing8internal33FormatForComparisonFailureMessageISsA7_cEENS0_6StringERKT_RKT0_ called 0 returned 0% blocks executed 0%
-function _ZN7testing8internal33FormatForComparisonFailureMessageISsA14_cEENS0_6StringERKT_RKT0_ called 1 returned 100% blocks executed 71%
-function _ZN7testing8internal33FormatForComparisonFailureMessageISsA45_cEENS0_6StringERKT_RKT0_ called 1 returned 100% blocks executed 71%
+function _ZN7testing8internal33FormatForComparisonFailureMessageISsA14_cEENS0_6StringERKT_RKT0_ called 0 returned 0% blocks executed 0%
+function _ZN7testing8internal33FormatForComparisonFailureMessageISsA45_cEENS0_6StringERKT_RKT0_ called 0 returned 0% blocks executed 0%
 function _ZN7testing8internal33FormatForComparisonFailureMessageISsA16_cEENS0_6StringERKT_RKT0_ called 0 returned 0% blocks executed 0%
 function _ZN7testing8internal33FormatForComparisonFailureMessageISsA9_cEENS0_6StringERKT_RKT0_ called 0 returned 0% blocks executed 0%
-function _ZN7testing8internal33FormatForComparisonFailureMessageIiiEENS0_6StringERKT_RKT0_ called 8 returned 100% blocks executed 71%
-       10: 1297:String FormatForComparisonFailureMessage(const T1& value,
+function _ZN7testing8internal33FormatForComparisonFailureMessageIiiEENS0_6StringERKT_RKT0_ called 0 returned 0% blocks executed 0%
+    #####: 1297:String FormatForComparisonFailureMessage(const T1& value,
         -: 1298:                                         const T2& /* other_operand */) {
         -: 1299:  // C++Builder compiles this incorrectly if the namespace isn't explicitly
         -: 1300:  // given.
-       10: 1301:  return ::testing::PrintToString(value);
+    #####: 1301:  return ::testing::PrintToString(value);
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
@@ -1348,18 +1348,18 @@ call    3 never executed
 call    4 never executed
 call    5 never executed
 call    6 never executed
-call    7 returned 100%
-branch  8 taken 100% (fallthrough)
-branch  9 taken 0% (throw)
-call   10 returned 100%
-call   11 returned 100%
+call    7 never executed
+branch  8 never executed
+branch  9 never executed
+call   10 never executed
+call   11 never executed
 call   12 never executed
 call   13 never executed
-call   14 returned 100%
-branch 15 taken 100% (fallthrough)
-branch 16 taken 0% (throw)
-call   17 returned 100%
-call   18 returned 100%
+call   14 never executed
+branch 15 never executed
+branch 16 never executed
+call   17 never executed
+call   18 never executed
 call   19 never executed
 call   20 never executed
 call   21 never executed
@@ -1376,11 +1376,11 @@ call   31 never executed
 call   32 never executed
 call   33 never executed
 call   34 never executed
-call   35 returned 100%
-branch 36 taken 100% (fallthrough)
-branch 37 taken 0% (throw)
-call   38 returned 100%
-call   39 returned 100%
+call   35 never executed
+branch 36 never executed
+branch 37 never executed
+call   38 never executed
+call   39 never executed
 call   40 never executed
 call   41 never executed
         -: 1302:}
@@ -1388,11 +1388,11 @@ call   41 never executed
         -: 1304:// The helper function for {ASSERT|EXPECT}_EQ.
         -: 1305:template <typename T1, typename T2>
 function _ZN7testing8internal11CmpHelperEQIA7_cSsEENS_15AssertionResultEPKcS5_RKT_RKT0_ called 1 returned 100% blocks executed 29%
-function _ZN7testing8internal11CmpHelperEQIA14_cSsEENS_15AssertionResultEPKcS5_RKT_RKT0_ called 1 returned 100% blocks executed 64%
-function _ZN7testing8internal11CmpHelperEQIA45_cSsEENS_15AssertionResultEPKcS5_RKT_RKT0_ called 1 returned 100% blocks executed 64%
+function _ZN7testing8internal11CmpHelperEQIA14_cSsEENS_15AssertionResultEPKcS5_RKT_RKT0_ called 1 returned 100% blocks executed 29%
+function _ZN7testing8internal11CmpHelperEQIA45_cSsEENS_15AssertionResultEPKcS5_RKT_RKT0_ called 1 returned 100% blocks executed 29%
 function _ZN7testing8internal11CmpHelperEQIA16_cSsEENS_15AssertionResultEPKcS5_RKT_RKT0_ called 1 returned 100% blocks executed 29%
 function _ZN7testing8internal11CmpHelperEQIA9_cSsEENS_15AssertionResultEPKcS5_RKT_RKT0_ called 2 returned 100% blocks executed 29%
-function _ZN7testing8internal11CmpHelperEQIiiEENS_15AssertionResultEPKcS4_RKT_RKT0_ called 10 returned 100% blocks executed 69%
+function _ZN7testing8internal11CmpHelperEQIiiEENS_15AssertionResultEPKcS4_RKT_RKT0_ called 10 returned 100% blocks executed 23%
        16: 1306:AssertionResult CmpHelperEQ(const char* expected_expression,
         -: 1307:                            const char* actual_expression,
         -: 1308:                            const T1& expected,
@@ -1408,23 +1408,23 @@ call    0 returned 100%
 branch  1 taken 100% (fallthrough)
 branch  2 taken 0%
 call    3 returned 100%
-branch  4 taken 0% (fallthrough)
-branch  5 taken 100%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0%
 call    6 returned 100%
-branch  7 taken 0% (fallthrough)
-branch  8 taken 100%
+branch  7 taken 100% (fallthrough)
+branch  8 taken 0%
 call    9 returned 100%
 branch 10 taken 100% (fallthrough)
 branch 11 taken 0%
 call   12 returned 100%
 branch 13 taken 100% (fallthrough)
 branch 14 taken 0%
-branch 15 taken 60% (fallthrough)
-branch 16 taken 40%
-       10: 1317:    return AssertionSuccess();
+branch 15 taken 100% (fallthrough)
+branch 16 taken 0%
+       16: 1317:    return AssertionSuccess();
 call    0 returned 100%
-call    1 never executed
-call    2 never executed
+call    1 returned 100%
+call    2 returned 100%
 call    3 returned 100%
 call    4 returned 100%
 call    5 returned 100%
@@ -1438,7 +1438,7 @@ call    5 returned 100%
         -: 1325:                   actual_expression,
         -: 1326:                   FormatForComparisonFailureMessage(expected, actual),
         -: 1327:                   FormatForComparisonFailureMessage(actual, expected),
-        6: 1328:                   false);
+    #####: 1328:                   false);
 call    0 never executed
 branch  1 never executed
 branch  2 never executed
@@ -1451,27 +1451,27 @@ call    8 never executed
 call    9 never executed
 call   10 never executed
 call   11 never executed
-call   12 returned 100%
-branch 13 taken 100% (fallthrough)
-branch 14 taken 0% (throw)
-call   15 returned 100%
-branch 16 taken 100% (fallthrough)
-branch 17 taken 0% (throw)
-call   18 returned 100%
-call   19 returned 100%
-call   20 returned 100%
+call   12 never executed
+branch 13 never executed
+branch 14 never executed
+call   15 never executed
+branch 16 never executed
+branch 17 never executed
+call   18 never executed
+call   19 never executed
+call   20 never executed
 call   21 never executed
 call   22 never executed
 call   23 never executed
-call   24 returned 100%
-branch 25 taken 100% (fallthrough)
-branch 26 taken 0% (throw)
-call   27 returned 100%
-branch 28 taken 100% (fallthrough)
-branch 29 taken 0% (throw)
-call   30 returned 100%
-call   31 returned 100%
-call   32 returned 100%
+call   24 never executed
+branch 25 never executed
+branch 26 never executed
+call   27 never executed
+branch 28 never executed
+branch 29 never executed
+call   30 never executed
+call   31 never executed
+call   32 never executed
 call   33 never executed
 call   34 never executed
 call   35 never executed
@@ -1499,15 +1499,15 @@ call   56 never executed
 call   57 never executed
 call   58 never executed
 call   59 never executed
-call   60 returned 100%
-branch 61 taken 100% (fallthrough)
-branch 62 taken 0% (throw)
-call   63 returned 100%
-branch 64 taken 100% (fallthrough)
-branch 65 taken 0% (throw)
-call   66 returned 100%
-call   67 returned 100%
-call   68 returned 100%
+call   60 never executed
+branch 61 never executed
+branch 62 never executed
+call   63 never executed
+branch 64 never executed
+branch 65 never executed
+call   66 never executed
+call   67 never executed
+call   68 never executed
 call   69 never executed
 call   70 never executed
 call   71 never executed

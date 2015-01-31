@@ -196,9 +196,9 @@
         -:  191:   *  that object.
         -:  192:  */
         -:  193:  inline _Setprecision 
-function _ZSt12setprecisioni called 6 returned 100% blocks executed 100%
-        6:  194:  setprecision(int __n)
-        6:  195:  { return { __n }; }
+function _ZSt12setprecisioni called 0 returned 0% blocks executed 0%
+    #####:  194:  setprecision(int __n)
+    #####:  195:  { return { __n }; }
         -:  196:
         -:  197:  template<typename _CharT, typename _Traits>
         -:  198:    inline basic_istream<_CharT, _Traits>& 
