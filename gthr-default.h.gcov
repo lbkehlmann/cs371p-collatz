@@ -1,7 +1,7 @@
         -:    0:Source:/usr/include/x86_64-linux-gnu/c++/4.7/bits/gthr-default.h
-        -:    0:Graph:TestCollatz.gcno
-        -:    0:Data:TestCollatz.gcda
-        -:    0:Runs:1
+        -:    0:Graph:Collatz.gcno
+        -:    0:Data:Collatz.gcda
+        -:    0:Runs:2
         -:    0:Programs:1
         -:    1:/* Threads compatibility routines for libgcc2 and libobjc.  */
         -:    2:/* Compile this one with gcc.  */

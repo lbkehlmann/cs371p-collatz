@@ -1,7 +1,7 @@
         -:    0:Source:/usr/include/c++/4.7/bits/move.h
         -:    0:Graph:Collatz.gcno
         -:    0:Data:Collatz.gcda
-        -:    0:Runs:1
+        -:    0:Runs:2
         -:    0:Programs:1
         -:    1:// Move, forward and identity for C++0x + swap -*- C++ -*-
         -:    2:
@@ -79,9 +79,9 @@
         -:   74:   */
         -:   75:  template<typename _Tp>
         -:   76:    constexpr _Tp&&
-function _ZSt7forwardIRiEOT_RNSt16remove_referenceIS1_E4typeE called 36 returned 100% blocks executed 100%
-       36:   77:    forward(typename std::remove_reference<_Tp>::type& __t) noexcept
-       36:   78:    { return static_cast<_Tp&&>(__t); }
+function _ZSt7forwardIRiEOT_RNSt16remove_referenceIS1_E4typeE called 72 returned 100% blocks executed 100%
+       72:   77:    forward(typename std::remove_reference<_Tp>::type& __t) noexcept
+       72:   78:    { return static_cast<_Tp&&>(__t); }
         -:   79:
         -:   80:  /**
         -:   81:   *  @brief  Forward an rvalue.

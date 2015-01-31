@@ -1,7 +1,7 @@
         -:    0:Source:/usr/include/c++/4.7/bits/stl_pair.h
         -:    0:Graph:Collatz.gcno
         -:    0:Data:Collatz.gcda
-        -:    0:Runs:1
+        -:    0:Runs:2
         -:    0:Programs:1
         -:    1:// Pair implementation -*- C++ -*-
         -:    2:
@@ -138,9 +138,9 @@
         -:  133:      template<class _U1, class _U2, class = typename
         -:  134:	       enable_if<__and_<is_convertible<_U1, _T1>,
         -:  135:				is_convertible<_U2, _T2>>::value>::type>
-function _ZNSt4pairIiiEC1IRiS2_vEEOT_OT0_ called 9 returned 100% blocks executed 100%
-        9:  136:	constexpr pair(_U1&& __x, _U2&& __y)
-        9:  137:	: first(std::forward<_U1>(__x)), second(std::forward<_U2>(__y)) { }
+function _ZNSt4pairIiiEC1IRiS2_vEEOT_OT0_ called 18 returned 100% blocks executed 100%
+       18:  136:	constexpr pair(_U1&& __x, _U2&& __y)
+       18:  137:	: first(std::forward<_U1>(__x)), second(std::forward<_U2>(__y)) { }
 call    0 returned 100%
 call    1 returned 100%
         -:  138:
@@ -273,13 +273,13 @@ call    1 returned 100%
         -:  265:  template<class _T1, class _T2>
         -:  266:    constexpr pair<typename __decay_and_strip<_T1>::__type,
         -:  267:                   typename __decay_and_strip<_T2>::__type>
-function _ZSt9make_pairIRiS0_ESt4pairINSt17__decay_and_stripIT_E6__typeENS2_IT0_E6__typeEEOS3_OS6_ called 9 returned 100% blocks executed 100%
-        9:  268:    make_pair(_T1&& __x, _T2&& __y)
+function _ZSt9make_pairIRiS0_ESt4pairINSt17__decay_and_stripIT_E6__typeENS2_IT0_E6__typeEEOS3_OS6_ called 18 returned 100% blocks executed 100%
+       18:  268:    make_pair(_T1&& __x, _T2&& __y)
         -:  269:    {
         -:  270:      typedef typename __decay_and_strip<_T1>::__type __ds_type1;
         -:  271:      typedef typename __decay_and_strip<_T2>::__type __ds_type2;
         -:  272:      typedef pair<__ds_type1, __ds_type2> 	      __pair_type;
-        9:  273:      return __pair_type(std::forward<_T1>(__x), std::forward<_T2>(__y));
+       18:  273:      return __pair_type(std::forward<_T1>(__x), std::forward<_T2>(__y));
 call    0 returned 100%
 call    1 returned 100%
 call    2 returned 100%

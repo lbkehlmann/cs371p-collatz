@@ -1,7 +1,7 @@
         -:    0:Source:/usr/include/c++/4.7/bits/stl_iterator_base_types.h
         -:    0:Graph:TestCollatz.gcno
         -:    0:Data:TestCollatz.gcda
-        -:    0:Runs:1
+        -:    0:Runs:2
         -:    0:Programs:1
         -:    1:// Types used in iterator implementation -*- C++ -*-
         -:    2:

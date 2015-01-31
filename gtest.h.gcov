@@ -1,7 +1,7 @@
         -:    0:Source:/usr/include/gtest/gtest.h
         -:    0:Graph:TestCollatz.gcno
         -:    0:Data:TestCollatz.gcda
-        -:    0:Runs:1
+        -:    0:Runs:2
         -:    0:Programs:1
         -:    1:// Copyright 2005, Google Inc.
         -:    2:// All rights reserved.
@@ -267,8 +267,8 @@
         -:  262://   Expected: Foo() is even
         -:  263://     Actual: it's 5
         -:  264://
-function _ZN7testing15AssertionResultD2Ev called 16 returned 100% blocks executed 100%
-       16:  265:class GTEST_API_ AssertionResult {
+function _ZN7testing15AssertionResultD2Ev called 32 returned 100% blocks executed 100%
+       32:  265:class GTEST_API_ AssertionResult {
 call    0 returned 100%
         -:  266: public:
         -:  267:  // Copy constructor.
@@ -278,8 +278,8 @@ call    0 returned 100%
         -:  271:  explicit AssertionResult(bool success) : success_(success) {}
         -:  272:
         -:  273:  // Returns true iff the assertion succeeded.
-function _ZNK7testing15AssertionResultcvbEv called 16 returned 100% blocks executed 100%
-       16:  274:  operator bool() const { return success_; }  // NOLINT
+function _ZNK7testing15AssertionResultcvbEv called 32 returned 100% blocks executed 100%
+       32:  274:  operator bool() const { return success_; }  // NOLINT
         -:  275:
         -:  276:  // Returns the assertion's negation. Used with EXPECT/ASSERT_FALSE.
         -:  277:  AssertionResult operator!() const;
@@ -387,8 +387,8 @@ call    0 never executed
         -:  371:  // test in test case Foo.  Hence a sub-class can define its own
         -:  372:  // SetUpTestCase() method to shadow the one defined in the super
         -:  373:  // class.
-function _ZN7testing4Test13SetUpTestCaseEv called 1 returned 100% blocks executed 100%
-        1:  374:  static void SetUpTestCase() {}
+function _ZN7testing4Test13SetUpTestCaseEv called 2 returned 100% blocks executed 100%
+        2:  374:  static void SetUpTestCase() {}
         -:  375:
         -:  376:  // Tears down the stuff shared by all tests in this test case.
         -:  377:  //
@@ -396,8 +396,8 @@ function _ZN7testing4Test13SetUpTestCaseEv called 1 returned 100% blocks execute
         -:  379:  // test in test case Foo.  Hence a sub-class can define its own
         -:  380:  // TearDownTestCase() method to shadow the one defined in the super
         -:  381:  // class.
-function _ZN7testing4Test16TearDownTestCaseEv called 1 returned 100% blocks executed 100%
-        1:  382:  static void TearDownTestCase() {}
+function _ZN7testing4Test16TearDownTestCaseEv called 2 returned 100% blocks executed 100%
+        2:  382:  static void TearDownTestCase() {}
         -:  383:
         -:  384:  // Returns true iff the current test has a fatal failure.
         -:  385:  static bool HasFatalFailure();
@@ -1387,13 +1387,13 @@ call   41 never executed
         -: 1303:
         -: 1304:// The helper function for {ASSERT|EXPECT}_EQ.
         -: 1305:template <typename T1, typename T2>
-function _ZN7testing8internal11CmpHelperEQIA7_cSsEENS_15AssertionResultEPKcS5_RKT_RKT0_ called 1 returned 100% blocks executed 29%
-function _ZN7testing8internal11CmpHelperEQIA14_cSsEENS_15AssertionResultEPKcS5_RKT_RKT0_ called 1 returned 100% blocks executed 29%
-function _ZN7testing8internal11CmpHelperEQIA45_cSsEENS_15AssertionResultEPKcS5_RKT_RKT0_ called 1 returned 100% blocks executed 29%
-function _ZN7testing8internal11CmpHelperEQIA16_cSsEENS_15AssertionResultEPKcS5_RKT_RKT0_ called 1 returned 100% blocks executed 29%
-function _ZN7testing8internal11CmpHelperEQIA9_cSsEENS_15AssertionResultEPKcS5_RKT_RKT0_ called 2 returned 100% blocks executed 29%
-function _ZN7testing8internal11CmpHelperEQIiiEENS_15AssertionResultEPKcS4_RKT_RKT0_ called 10 returned 100% blocks executed 23%
-       16: 1306:AssertionResult CmpHelperEQ(const char* expected_expression,
+function _ZN7testing8internal11CmpHelperEQIA7_cSsEENS_15AssertionResultEPKcS5_RKT_RKT0_ called 2 returned 100% blocks executed 29%
+function _ZN7testing8internal11CmpHelperEQIA14_cSsEENS_15AssertionResultEPKcS5_RKT_RKT0_ called 2 returned 100% blocks executed 29%
+function _ZN7testing8internal11CmpHelperEQIA45_cSsEENS_15AssertionResultEPKcS5_RKT_RKT0_ called 2 returned 100% blocks executed 29%
+function _ZN7testing8internal11CmpHelperEQIA16_cSsEENS_15AssertionResultEPKcS5_RKT_RKT0_ called 2 returned 100% blocks executed 29%
+function _ZN7testing8internal11CmpHelperEQIA9_cSsEENS_15AssertionResultEPKcS5_RKT_RKT0_ called 4 returned 100% blocks executed 29%
+function _ZN7testing8internal11CmpHelperEQIiiEENS_15AssertionResultEPKcS4_RKT_RKT0_ called 20 returned 100% blocks executed 23%
+       32: 1306:AssertionResult CmpHelperEQ(const char* expected_expression,
         -: 1307:                            const char* actual_expression,
         -: 1308:                            const T1& expected,
         -: 1309:                            const T2& actual) {
@@ -1403,7 +1403,7 @@ function _ZN7testing8internal11CmpHelperEQIiiEENS_15AssertionResultEPKcS4_RKT_RK
         -: 1313:                               // signed/unsigned mismatch.
         -: 1314:#endif
         -: 1315:
-       16: 1316:  if (expected == actual) {
+       32: 1316:  if (expected == actual) {
 call    0 returned 100%
 branch  1 taken 100% (fallthrough)
 branch  2 taken 0%
@@ -1421,7 +1421,7 @@ branch 13 taken 100% (fallthrough)
 branch 14 taken 0%
 branch 15 taken 100% (fallthrough)
 branch 16 taken 0%
-       16: 1317:    return AssertionSuccess();
+       32: 1317:    return AssertionSuccess();
 call    0 returned 100%
 call    1 returned 100%
 call    2 returned 100%
@@ -1530,18 +1530,18 @@ call   71 never executed
         -: 1345: public:
         -: 1346:  // This templatized version is for the general case.
         -: 1347:  template <typename T1, typename T2>
-function _ZN7testing8internal8EqHelperILb0EE7CompareIA7_cSsEENS_15AssertionResultEPKcS7_RKT_RKT0_ called 1 returned 100% blocks executed 100%
-function _ZN7testing8internal8EqHelperILb0EE7CompareIA14_cSsEENS_15AssertionResultEPKcS7_RKT_RKT0_ called 1 returned 100% blocks executed 100%
-function _ZN7testing8internal8EqHelperILb0EE7CompareIA45_cSsEENS_15AssertionResultEPKcS7_RKT_RKT0_ called 1 returned 100% blocks executed 100%
-function _ZN7testing8internal8EqHelperILb0EE7CompareIA16_cSsEENS_15AssertionResultEPKcS7_RKT_RKT0_ called 1 returned 100% blocks executed 100%
-function _ZN7testing8internal8EqHelperILb0EE7CompareIA9_cSsEENS_15AssertionResultEPKcS7_RKT_RKT0_ called 2 returned 100% blocks executed 100%
-function _ZN7testing8internal8EqHelperILb0EE7CompareIiiEENS_15AssertionResultEPKcS6_RKT_RKT0_ called 10 returned 100% blocks executed 100%
-       16: 1348:  static AssertionResult Compare(const char* expected_expression,
+function _ZN7testing8internal8EqHelperILb0EE7CompareIA7_cSsEENS_15AssertionResultEPKcS7_RKT_RKT0_ called 2 returned 100% blocks executed 100%
+function _ZN7testing8internal8EqHelperILb0EE7CompareIA14_cSsEENS_15AssertionResultEPKcS7_RKT_RKT0_ called 2 returned 100% blocks executed 100%
+function _ZN7testing8internal8EqHelperILb0EE7CompareIA45_cSsEENS_15AssertionResultEPKcS7_RKT_RKT0_ called 2 returned 100% blocks executed 100%
+function _ZN7testing8internal8EqHelperILb0EE7CompareIA16_cSsEENS_15AssertionResultEPKcS7_RKT_RKT0_ called 2 returned 100% blocks executed 100%
+function _ZN7testing8internal8EqHelperILb0EE7CompareIA9_cSsEENS_15AssertionResultEPKcS7_RKT_RKT0_ called 4 returned 100% blocks executed 100%
+function _ZN7testing8internal8EqHelperILb0EE7CompareIiiEENS_15AssertionResultEPKcS6_RKT_RKT0_ called 20 returned 100% blocks executed 100%
+       32: 1348:  static AssertionResult Compare(const char* expected_expression,
         -: 1349:                                 const char* actual_expression,
         -: 1350:                                 const T1& expected,
         -: 1351:                                 const T2& actual) {
         -: 1352:    return CmpHelperEQ(expected_expression, actual_expression, expected,
-       16: 1353:                       actual);
+       32: 1353:                       actual);
 call    0 returned 100%
 call    1 returned 100%
 call    2 returned 100%

@@ -1,7 +1,7 @@
         -:    0:Source:/usr/include/gtest/internal/gtest-internal.h
         -:    0:Graph:TestCollatz.gcno
         -:    0:Data:TestCollatz.gcda
-        -:    0:Runs:1
+        -:    0:Runs:2
         -:    0:Programs:1
         -:    1:// Copyright 2005, Google Inc.
         -:    2:// All rights reserved.
@@ -516,8 +516,8 @@ call    0 never executed
         -:  509:class TestFactoryBase {
         -:  510: public:
 function _ZN7testing8internal15TestFactoryBaseD0Ev called 0 returned 0% blocks executed 0%
-function _ZN7testing8internal15TestFactoryBaseD2Ev called 13 returned 100% blocks executed 75%
-       13:  511:  virtual ~TestFactoryBase() {}
+function _ZN7testing8internal15TestFactoryBaseD2Ev called 26 returned 100% blocks executed 75%
+       26:  511:  virtual ~TestFactoryBase() {}
 call    0 never executed
 call    1 never executed
 branch  2 taken 0% (fallthrough)
@@ -529,8 +529,8 @@ call    4 never executed
         -:  515:  virtual Test* CreateTest() = 0;
         -:  516:
         -:  517: protected:
-function _ZN7testing8internal15TestFactoryBaseC2Ev called 13 returned 100% blocks executed 100%
-       13:  518:  TestFactoryBase() {}
+function _ZN7testing8internal15TestFactoryBaseC2Ev called 26 returned 100% blocks executed 100%
+       26:  518:  TestFactoryBase() {}
         -:  519:
         -:  520: private:
         -:  521:  GTEST_DISALLOW_COPY_AND_ASSIGN_(TestFactoryBase);
@@ -539,46 +539,46 @@ function _ZN7testing8internal15TestFactoryBaseC2Ev called 13 returned 100% block
         -:  524:// This class provides implementation of TeastFactoryBase interface.
         -:  525:// It is used in TEST and TEST_F macros.
         -:  526:template <class TestClass>
-function _ZN7testing8internal15TestFactoryImplI19Collatz_read_0_TestED0Ev called 1 returned 100% blocks executed 100%
-function _ZN7testing8internal15TestFactoryImplI19Collatz_read_0_TestED2Ev called 1 returned 100% blocks executed 75%
-function _ZN7testing8internal15TestFactoryImplI19Collatz_read_1_TestED0Ev called 1 returned 100% blocks executed 100%
-function _ZN7testing8internal15TestFactoryImplI19Collatz_read_1_TestED2Ev called 1 returned 100% blocks executed 75%
-function _ZN7testing8internal15TestFactoryImplI19Collatz_read_2_TestED0Ev called 1 returned 100% blocks executed 100%
-function _ZN7testing8internal15TestFactoryImplI19Collatz_read_2_TestED2Ev called 1 returned 100% blocks executed 75%
-function _ZN7testing8internal15TestFactoryImplI19Collatz_eval_1_TestED0Ev called 1 returned 100% blocks executed 100%
-function _ZN7testing8internal15TestFactoryImplI19Collatz_eval_1_TestED2Ev called 1 returned 100% blocks executed 75%
-function _ZN7testing8internal15TestFactoryImplI19Collatz_eval_2_TestED0Ev called 1 returned 100% blocks executed 100%
-function _ZN7testing8internal15TestFactoryImplI19Collatz_eval_2_TestED2Ev called 1 returned 100% blocks executed 75%
-function _ZN7testing8internal15TestFactoryImplI19Collatz_eval_3_TestED0Ev called 1 returned 100% blocks executed 100%
-function _ZN7testing8internal15TestFactoryImplI19Collatz_eval_3_TestED2Ev called 1 returned 100% blocks executed 75%
-function _ZN7testing8internal15TestFactoryImplI19Collatz_eval_4_TestED0Ev called 1 returned 100% blocks executed 100%
-function _ZN7testing8internal15TestFactoryImplI19Collatz_eval_4_TestED2Ev called 1 returned 100% blocks executed 75%
-function _ZN7testing8internal15TestFactoryImplI20Collatz_print_0_TestED0Ev called 1 returned 100% blocks executed 100%
-function _ZN7testing8internal15TestFactoryImplI20Collatz_print_0_TestED2Ev called 1 returned 100% blocks executed 75%
-function _ZN7testing8internal15TestFactoryImplI20Collatz_print_1_TestED0Ev called 1 returned 100% blocks executed 100%
-function _ZN7testing8internal15TestFactoryImplI20Collatz_print_1_TestED2Ev called 1 returned 100% blocks executed 75%
-function _ZN7testing8internal15TestFactoryImplI20Collatz_print_2_TestED0Ev called 1 returned 100% blocks executed 100%
-function _ZN7testing8internal15TestFactoryImplI20Collatz_print_2_TestED2Ev called 1 returned 100% blocks executed 75%
-function _ZN7testing8internal15TestFactoryImplI20Collatz_solve_0_TestED0Ev called 1 returned 100% blocks executed 100%
-function _ZN7testing8internal15TestFactoryImplI20Collatz_solve_0_TestED2Ev called 1 returned 100% blocks executed 75%
-function _ZN7testing8internal15TestFactoryImplI20Collatz_solve_1_TestED0Ev called 1 returned 100% blocks executed 100%
-function _ZN7testing8internal15TestFactoryImplI20Collatz_solve_1_TestED2Ev called 1 returned 100% blocks executed 75%
-function _ZN7testing8internal15TestFactoryImplI20Collatz_solve_2_TestED0Ev called 1 returned 100% blocks executed 100%
-function _ZN7testing8internal15TestFactoryImplI20Collatz_solve_2_TestED2Ev called 1 returned 100% blocks executed 75%
-function _ZN7testing8internal15TestFactoryImplI20Collatz_solve_2_TestEC2Ev called 1 returned 100% blocks executed 100%
-function _ZN7testing8internal15TestFactoryImplI20Collatz_solve_1_TestEC2Ev called 1 returned 100% blocks executed 100%
-function _ZN7testing8internal15TestFactoryImplI20Collatz_solve_0_TestEC2Ev called 1 returned 100% blocks executed 100%
-function _ZN7testing8internal15TestFactoryImplI20Collatz_print_2_TestEC2Ev called 1 returned 100% blocks executed 100%
-function _ZN7testing8internal15TestFactoryImplI20Collatz_print_1_TestEC2Ev called 1 returned 100% blocks executed 100%
-function _ZN7testing8internal15TestFactoryImplI20Collatz_print_0_TestEC2Ev called 1 returned 100% blocks executed 100%
-function _ZN7testing8internal15TestFactoryImplI19Collatz_eval_4_TestEC2Ev called 1 returned 100% blocks executed 100%
-function _ZN7testing8internal15TestFactoryImplI19Collatz_eval_3_TestEC2Ev called 1 returned 100% blocks executed 100%
-function _ZN7testing8internal15TestFactoryImplI19Collatz_eval_2_TestEC2Ev called 1 returned 100% blocks executed 100%
-function _ZN7testing8internal15TestFactoryImplI19Collatz_eval_1_TestEC2Ev called 1 returned 100% blocks executed 100%
-function _ZN7testing8internal15TestFactoryImplI19Collatz_read_2_TestEC2Ev called 1 returned 100% blocks executed 100%
-function _ZN7testing8internal15TestFactoryImplI19Collatz_read_1_TestEC2Ev called 1 returned 100% blocks executed 100%
-function _ZN7testing8internal15TestFactoryImplI19Collatz_read_0_TestEC2Ev called 1 returned 100% blocks executed 100%
-       39:  527:class TestFactoryImpl : public TestFactoryBase {
+function _ZN7testing8internal15TestFactoryImplI19Collatz_read_0_TestED0Ev called 2 returned 100% blocks executed 100%
+function _ZN7testing8internal15TestFactoryImplI19Collatz_read_0_TestED2Ev called 2 returned 100% blocks executed 75%
+function _ZN7testing8internal15TestFactoryImplI19Collatz_read_1_TestED0Ev called 2 returned 100% blocks executed 100%
+function _ZN7testing8internal15TestFactoryImplI19Collatz_read_1_TestED2Ev called 2 returned 100% blocks executed 75%
+function _ZN7testing8internal15TestFactoryImplI19Collatz_read_2_TestED0Ev called 2 returned 100% blocks executed 100%
+function _ZN7testing8internal15TestFactoryImplI19Collatz_read_2_TestED2Ev called 2 returned 100% blocks executed 75%
+function _ZN7testing8internal15TestFactoryImplI19Collatz_eval_1_TestED0Ev called 2 returned 100% blocks executed 100%
+function _ZN7testing8internal15TestFactoryImplI19Collatz_eval_1_TestED2Ev called 2 returned 100% blocks executed 75%
+function _ZN7testing8internal15TestFactoryImplI19Collatz_eval_2_TestED0Ev called 2 returned 100% blocks executed 100%
+function _ZN7testing8internal15TestFactoryImplI19Collatz_eval_2_TestED2Ev called 2 returned 100% blocks executed 75%
+function _ZN7testing8internal15TestFactoryImplI19Collatz_eval_3_TestED0Ev called 2 returned 100% blocks executed 100%
+function _ZN7testing8internal15TestFactoryImplI19Collatz_eval_3_TestED2Ev called 2 returned 100% blocks executed 75%
+function _ZN7testing8internal15TestFactoryImplI19Collatz_eval_4_TestED0Ev called 2 returned 100% blocks executed 100%
+function _ZN7testing8internal15TestFactoryImplI19Collatz_eval_4_TestED2Ev called 2 returned 100% blocks executed 75%
+function _ZN7testing8internal15TestFactoryImplI20Collatz_print_0_TestED0Ev called 2 returned 100% blocks executed 100%
+function _ZN7testing8internal15TestFactoryImplI20Collatz_print_0_TestED2Ev called 2 returned 100% blocks executed 75%
+function _ZN7testing8internal15TestFactoryImplI20Collatz_print_1_TestED0Ev called 2 returned 100% blocks executed 100%
+function _ZN7testing8internal15TestFactoryImplI20Collatz_print_1_TestED2Ev called 2 returned 100% blocks executed 75%
+function _ZN7testing8internal15TestFactoryImplI20Collatz_print_2_TestED0Ev called 2 returned 100% blocks executed 100%
+function _ZN7testing8internal15TestFactoryImplI20Collatz_print_2_TestED2Ev called 2 returned 100% blocks executed 75%
+function _ZN7testing8internal15TestFactoryImplI20Collatz_solve_0_TestED0Ev called 2 returned 100% blocks executed 100%
+function _ZN7testing8internal15TestFactoryImplI20Collatz_solve_0_TestED2Ev called 2 returned 100% blocks executed 75%
+function _ZN7testing8internal15TestFactoryImplI20Collatz_solve_1_TestED0Ev called 2 returned 100% blocks executed 100%
+function _ZN7testing8internal15TestFactoryImplI20Collatz_solve_1_TestED2Ev called 2 returned 100% blocks executed 75%
+function _ZN7testing8internal15TestFactoryImplI20Collatz_solve_2_TestED0Ev called 2 returned 100% blocks executed 100%
+function _ZN7testing8internal15TestFactoryImplI20Collatz_solve_2_TestED2Ev called 2 returned 100% blocks executed 75%
+function _ZN7testing8internal15TestFactoryImplI20Collatz_solve_2_TestEC2Ev called 2 returned 100% blocks executed 100%
+function _ZN7testing8internal15TestFactoryImplI20Collatz_solve_1_TestEC2Ev called 2 returned 100% blocks executed 100%
+function _ZN7testing8internal15TestFactoryImplI20Collatz_solve_0_TestEC2Ev called 2 returned 100% blocks executed 100%
+function _ZN7testing8internal15TestFactoryImplI20Collatz_print_2_TestEC2Ev called 2 returned 100% blocks executed 100%
+function _ZN7testing8internal15TestFactoryImplI20Collatz_print_1_TestEC2Ev called 2 returned 100% blocks executed 100%
+function _ZN7testing8internal15TestFactoryImplI20Collatz_print_0_TestEC2Ev called 2 returned 100% blocks executed 100%
+function _ZN7testing8internal15TestFactoryImplI19Collatz_eval_4_TestEC2Ev called 2 returned 100% blocks executed 100%
+function _ZN7testing8internal15TestFactoryImplI19Collatz_eval_3_TestEC2Ev called 2 returned 100% blocks executed 100%
+function _ZN7testing8internal15TestFactoryImplI19Collatz_eval_2_TestEC2Ev called 2 returned 100% blocks executed 100%
+function _ZN7testing8internal15TestFactoryImplI19Collatz_eval_1_TestEC2Ev called 2 returned 100% blocks executed 100%
+function _ZN7testing8internal15TestFactoryImplI19Collatz_read_2_TestEC2Ev called 2 returned 100% blocks executed 100%
+function _ZN7testing8internal15TestFactoryImplI19Collatz_read_1_TestEC2Ev called 2 returned 100% blocks executed 100%
+function _ZN7testing8internal15TestFactoryImplI19Collatz_read_0_TestEC2Ev called 2 returned 100% blocks executed 100%
+       78:  527:class TestFactoryImpl : public TestFactoryBase {
 call    0 returned 100%
 call    1 returned 100%
 call    2 returned 100%
@@ -671,20 +671,20 @@ call   88 returned 100%
 call   89 returned 100%
 call   90 returned 100%
         -:  528: public:
-function _ZN7testing8internal15TestFactoryImplI19Collatz_read_0_TestE10CreateTestEv called 1 returned 100% blocks executed 67%
-function _ZN7testing8internal15TestFactoryImplI19Collatz_read_1_TestE10CreateTestEv called 1 returned 100% blocks executed 67%
-function _ZN7testing8internal15TestFactoryImplI19Collatz_read_2_TestE10CreateTestEv called 1 returned 100% blocks executed 67%
-function _ZN7testing8internal15TestFactoryImplI19Collatz_eval_1_TestE10CreateTestEv called 1 returned 100% blocks executed 67%
-function _ZN7testing8internal15TestFactoryImplI19Collatz_eval_2_TestE10CreateTestEv called 1 returned 100% blocks executed 67%
-function _ZN7testing8internal15TestFactoryImplI19Collatz_eval_3_TestE10CreateTestEv called 1 returned 100% blocks executed 67%
-function _ZN7testing8internal15TestFactoryImplI19Collatz_eval_4_TestE10CreateTestEv called 1 returned 100% blocks executed 67%
-function _ZN7testing8internal15TestFactoryImplI20Collatz_print_0_TestE10CreateTestEv called 1 returned 100% blocks executed 67%
-function _ZN7testing8internal15TestFactoryImplI20Collatz_print_1_TestE10CreateTestEv called 1 returned 100% blocks executed 67%
-function _ZN7testing8internal15TestFactoryImplI20Collatz_print_2_TestE10CreateTestEv called 1 returned 100% blocks executed 67%
-function _ZN7testing8internal15TestFactoryImplI20Collatz_solve_0_TestE10CreateTestEv called 1 returned 100% blocks executed 67%
-function _ZN7testing8internal15TestFactoryImplI20Collatz_solve_1_TestE10CreateTestEv called 1 returned 100% blocks executed 67%
-function _ZN7testing8internal15TestFactoryImplI20Collatz_solve_2_TestE10CreateTestEv called 1 returned 100% blocks executed 67%
-       13:  529:  virtual Test* CreateTest() { return new TestClass; }
+function _ZN7testing8internal15TestFactoryImplI19Collatz_read_0_TestE10CreateTestEv called 2 returned 100% blocks executed 67%
+function _ZN7testing8internal15TestFactoryImplI19Collatz_read_1_TestE10CreateTestEv called 2 returned 100% blocks executed 67%
+function _ZN7testing8internal15TestFactoryImplI19Collatz_read_2_TestE10CreateTestEv called 2 returned 100% blocks executed 67%
+function _ZN7testing8internal15TestFactoryImplI19Collatz_eval_1_TestE10CreateTestEv called 2 returned 100% blocks executed 67%
+function _ZN7testing8internal15TestFactoryImplI19Collatz_eval_2_TestE10CreateTestEv called 2 returned 100% blocks executed 67%
+function _ZN7testing8internal15TestFactoryImplI19Collatz_eval_3_TestE10CreateTestEv called 2 returned 100% blocks executed 67%
+function _ZN7testing8internal15TestFactoryImplI19Collatz_eval_4_TestE10CreateTestEv called 2 returned 100% blocks executed 67%
+function _ZN7testing8internal15TestFactoryImplI20Collatz_print_0_TestE10CreateTestEv called 2 returned 100% blocks executed 67%
+function _ZN7testing8internal15TestFactoryImplI20Collatz_print_1_TestE10CreateTestEv called 2 returned 100% blocks executed 67%
+function _ZN7testing8internal15TestFactoryImplI20Collatz_print_2_TestE10CreateTestEv called 2 returned 100% blocks executed 67%
+function _ZN7testing8internal15TestFactoryImplI20Collatz_solve_0_TestE10CreateTestEv called 2 returned 100% blocks executed 67%
+function _ZN7testing8internal15TestFactoryImplI20Collatz_solve_1_TestE10CreateTestEv called 2 returned 100% blocks executed 67%
+function _ZN7testing8internal15TestFactoryImplI20Collatz_solve_2_TestE10CreateTestEv called 2 returned 100% blocks executed 67%
+       26:  529:  virtual Test* CreateTest() { return new TestClass; }
 call    0 returned 100%
 branch  1 taken 100% (fallthrough)
 branch  2 taken 0% (throw)

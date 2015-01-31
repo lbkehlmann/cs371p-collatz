@@ -1,7 +1,7 @@
         -:    0:Source:/usr/include/c++/4.7/bits/char_traits.h
-        -:    0:Graph:TestCollatz.gcno
-        -:    0:Data:TestCollatz.gcda
-        -:    0:Runs:1
+        -:    0:Graph:Collatz.gcno
+        -:    0:Data:Collatz.gcda
+        -:    0:Runs:2
         -:    0:Programs:1
         -:    1:// Character Traits for use by standard string and iostream -*- C++ -*-
         -:    2:
@@ -246,9 +246,8 @@
         -:  241:      typedef mbstate_t         state_type;
         -:  242:
         -:  243:      static void
-function _ZNSt11char_traitsIcE6assignERcRKc called 0 returned 0% blocks executed 0%
-    #####:  244:      assign(char_type& __c1, const char_type& __c2) _GLIBCXX_NOEXCEPT
-    #####:  245:      { __c1 = __c2; }
+        -:  244:      assign(char_type& __c1, const char_type& __c2) _GLIBCXX_NOEXCEPT
+        -:  245:      { __c1 = __c2; }
         -:  246:
         -:  247:      static _GLIBCXX_CONSTEXPR bool
         -:  248:      eq(const char_type& __c1, const char_type& __c2) _GLIBCXX_NOEXCEPT
@@ -276,9 +275,8 @@ function _ZNSt11char_traitsIcE6lengthEPKc called 0 returned 0% blocks executed 0
         -:  269:      { return static_cast<char_type*>(__builtin_memmove(__s1, __s2, __n)); }
         -:  270:
         -:  271:      static char_type*
-function _ZNSt11char_traitsIcE4copyEPcPKcm called 0 returned 0% blocks executed 0%
-    #####:  272:      copy(char_type* __s1, const char_type* __s2, size_t __n)
-    #####:  273:      { return static_cast<char_type*>(__builtin_memcpy(__s1, __s2, __n)); }
+        -:  272:      copy(char_type* __s1, const char_type* __s2, size_t __n)
+        -:  273:      { return static_cast<char_type*>(__builtin_memcpy(__s1, __s2, __n)); }
         -:  274:
         -:  275:      static char_type*
         -:  276:      assign(char_type* __s, size_t __n, char_type __a)

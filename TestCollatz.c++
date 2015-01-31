@@ -63,7 +63,7 @@ TEST(Collatz, eval_2) {
     ASSERT_EQ(125, v);}
 
 TEST(Collatz, eval_3) {
-    const int v = collatz_eval(201, 210);
+    const int v = collatz_eval(210, 201);
     ASSERT_EQ(89, v);}
 
 TEST(Collatz, eval_4) {

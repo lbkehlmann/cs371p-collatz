@@ -1,7 +1,7 @@
         -:    0:Source:/usr/include/gtest/internal/gtest-string.h
         -:    0:Graph:TestCollatz.gcno
         -:    0:Data:TestCollatz.gcda
-        -:    0:Runs:1
+        -:    0:Runs:2
         -:    0:Programs:1
         -:    1:// Copyright 2005, Google Inc.
         -:    2:// All rights reserved.
@@ -220,8 +220,8 @@
         -:  215:
         -:  216:  // D'tor.  String is intended to be a final class, so the d'tor
         -:  217:  // doesn't need to be virtual.
-function _ZN7testing8internal6StringD2Ev called 271 returned 100% blocks executed 100%
-      271:  218:  ~String() { delete[] c_str_; }
+function _ZN7testing8internal6StringD2Ev called 542 returned 100% blocks executed 100%
+      542:  218:  ~String() { delete[] c_str_; }
 branch  0 taken 99% (fallthrough)
 branch  1 taken 1%
 call    2 returned 100%

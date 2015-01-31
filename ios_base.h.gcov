@@ -1,7 +1,7 @@
         -:    0:Source:/usr/include/c++/4.7/bits/ios_base.h
-        -:    0:Graph:TestCollatz.gcno
-        -:    0:Data:TestCollatz.gcda
-        -:    0:Runs:1
+        -:    0:Graph:Collatz.gcno
+        -:    0:Data:Collatz.gcda
+        -:    0:Runs:2
         -:    0:Programs:1
         -:    1:// Iostreams base classes -*- C++ -*-
         -:    2:
@@ -159,8 +159,9 @@ function _ZStorSt13_Ios_OpenmodeS_ called 0 returned 0% blocks executed 0%
         -:  152:    };
         -:  153:
         -:  154:  inline _GLIBCXX_CONSTEXPR _Ios_Iostate
-        -:  155:  operator&(_Ios_Iostate __a, _Ios_Iostate __b)
-        -:  156:  { return _Ios_Iostate(static_cast<int>(__a) & static_cast<int>(__b)); }
+function _ZStanSt12_Ios_IostateS_ called 0 returned 0% blocks executed 0%
+    #####:  155:  operator&(_Ios_Iostate __a, _Ios_Iostate __b)
+    #####:  156:  { return _Ios_Iostate(static_cast<int>(__a) & static_cast<int>(__b)); }
         -:  157:
         -:  158:  inline _GLIBCXX_CONSTEXPR _Ios_Iostate
 function _ZStorSt12_Ios_IostateS_ called 0 returned 0% blocks executed 0%
@@ -637,12 +638,11 @@ function _ZStorSt12_Ios_IostateS_ called 0 returned 0% blocks executed 0%
         -:  629:     *  @return  The previous value of precision().
         -:  630:    */
         -:  631:    streamsize
-function _ZNSt8ios_base9precisionEl called 0 returned 0% blocks executed 0%
-    #####:  632:    precision(streamsize __prec)
+        -:  632:    precision(streamsize __prec)
         -:  633:    {
-    #####:  634:      streamsize __old = _M_precision;
-    #####:  635:      _M_precision = __prec;
-    #####:  636:      return __old;
+        -:  634:      streamsize __old = _M_precision;
+        -:  635:      _M_precision = __prec;
+        -:  636:      return __old;
         -:  637:    }
         -:  638:
         -:  639:    /**

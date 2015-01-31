@@ -1,7 +1,7 @@
         -:    0:Source:/usr/include/gtest/gtest-test-part.h
         -:    0:Graph:TestCollatz.gcno
         -:    0:Data:TestCollatz.gcda
-        -:    0:Runs:1
+        -:    0:Runs:2
         -:    0:Programs:1
         -:    1:// Copyright 2008, Google Inc.
         -:    2:// All rights reserved.

@@ -1,7 +1,7 @@
         -:    0:Source:/usr/include/c++/4.7/bits/basic_string.h
-        -:    0:Graph:TestCollatz.gcno
-        -:    0:Data:TestCollatz.gcda
-        -:    0:Runs:1
+        -:    0:Graph:Collatz.gcno
+        -:    0:Data:Collatz.gcda
+        -:    0:Runs:2
         -:    0:Programs:1
         -:    1:// Components for manipulating sequences of characters -*- C++ -*-
         -:    2:
@@ -1722,16 +1722,11 @@ call    0 never executed
         -: 1715:      // requires special behaviour if _InIter is an integral type
         -: 1716:      template<class _InIterator>
         -: 1717:        static _CharT*
-function _ZNSs16_S_construct_auxIPcEES0_T_S1_RKSaIcESt12__false_type called 0 returned 0% blocks executed 0%
-    #####: 1718:        _S_construct_aux(_InIterator __beg, _InIterator __end,
+        -: 1718:        _S_construct_aux(_InIterator __beg, _InIterator __end,
         -: 1719:			 const _Alloc& __a, __false_type)
         -: 1720:	{
         -: 1721:          typedef typename iterator_traits<_InIterator>::iterator_category _Tag;
-    #####: 1722:          return _S_construct(__beg, __end, __a, _Tag());
-branch  0 never executed
-branch  1 never executed
-call    2 never executed
-call    3 never executed
+        -: 1722:          return _S_construct(__beg, __end, __a, _Tag());
         -: 1723:	}
         -: 1724:
         -: 1725:      // _GLIBCXX_RESOLVE_LIB_DEFECTS
@@ -1749,15 +1744,10 @@ call    3 never executed
         -: 1737:
         -: 1738:      template<class _InIterator>
         -: 1739:        static _CharT*
-function _ZNSs12_S_constructIPcEES0_T_S1_RKSaIcE called 0 returned 0% blocks executed 0%
-    #####: 1740:        _S_construct(_InIterator __beg, _InIterator __end, const _Alloc& __a)
+        -: 1740:        _S_construct(_InIterator __beg, _InIterator __end, const _Alloc& __a)
         -: 1741:	{
         -: 1742:	  typedef typename std::__is_integer<_InIterator>::__type _Integral;
-    #####: 1743:	  return _S_construct_aux(__beg, __end, __a, _Integral());
-branch  0 never executed
-branch  1 never executed
-call    2 never executed
-call    3 never executed
+        -: 1743:	  return _S_construct_aux(__beg, __end, __a, _Integral());
         -: 1744:        }
         -: 1745:
         -: 1746:      // For Input Iterators, used in istreambuf_iterators, etc.
@@ -2518,11 +2508,9 @@ call    3 never executed
         -: 2501:   */
         -: 2502:  template<typename _CharT, typename _Traits, typename _Alloc>
         -: 2503:    inline bool
-function _ZSteqIcSt11char_traitsIcESaIcEEbPKT_RKSbIS3_T0_T1_E called 6 returned 100% blocks executed 100%
-        6: 2504:    operator==(const _CharT* __lhs,
+        -: 2504:    operator==(const _CharT* __lhs,
         -: 2505:	       const basic_string<_CharT, _Traits, _Alloc>& __rhs)
-        6: 2506:    { return __rhs.compare(__lhs) == 0; }
-call    0 returned 100%
+        -: 2506:    { return __rhs.compare(__lhs) == 0; }
         -: 2507:
         -: 2508:  /**
         -: 2509:   *  @brief  Test equivalence of string and C string.

@@ -1,7 +1,7 @@
         -:    0:Source:/usr/include/c++/4.7/sstream
-        -:    0:Graph:TestCollatz.gcno
-        -:    0:Data:TestCollatz.gcda
-        -:    0:Runs:1
+        -:    0:Graph:Collatz.gcno
+        -:    0:Data:Collatz.gcda
+        -:    0:Runs:2
         -:    0:Programs:1
         -:    1:// String based streams -*- C++ -*-
         -:    2:
