@@ -220,8 +220,8 @@
         -:  215:
         -:  216:  // D'tor.  String is intended to be a final class, so the d'tor
         -:  217:  // doesn't need to be virtual.
-function _ZN7testing8internal6StringD2Ev called 271 returned 0% blocks executed 67%
-      271:  218:  ~String() { delete[] c_str_; }
+function _ZN7testing8internal6StringD2Ev called 386 returned 100% blocks executed 100%
+      386:  218:  ~String() { delete[] c_str_; }
 branch  0 taken 99% (fallthrough)
 branch  1 taken 1%
 call    2 returned 100%
@@ -232,13 +232,13 @@ call    2 returned 100%
         -:  223:  // Converting a ::std::string or ::string containing an embedded NUL
         -:  224:  // character to a String will result in the prefix up to the first
         -:  225:  // NUL character.
-function _ZN7testing8internal6StringC2ERKSs called 9 returned 100% blocks executed 75%
-        9:  226:  String(const ::std::string& str) {
-        9:  227:    ConstructNonNull(str.c_str(), str.length());
+function _ZN7testing8internal6StringC2ERKSs called 10 returned 100% blocks executed 100%
+       10:  226:  String(const ::std::string& str) {
+       10:  227:    ConstructNonNull(str.c_str(), str.length());
 call    0 returned 100%
 call    1 returned 100%
 call    2 returned 100%
-        9:  228:  }
+       10:  228:  }
         -:  229:
         -:  230:  operator ::std::string() const { return ::std::string(c_str(), length()); }
         -:  231:
@@ -312,15 +312,15 @@ call    2 returned 100%
         -:  299:  // function can only be called when c_str_ has not been allocated.
         -:  300:  // ConstructNonNull(NULL, 0) results in an empty string ("").
         -:  301:  // ConstructNonNull(NULL, non_zero) is undefined behavior.
-function _ZN7testing8internal6String16ConstructNonNullEPKcm called 9 returned 100% blocks executed 50%
-        9:  302:  void ConstructNonNull(const char* buffer, size_t a_length) {
-        9:  303:    char* const str = new char[a_length + 1];
+function _ZN7testing8internal6String16ConstructNonNullEPKcm called 10 returned 100% blocks executed 100%
+       10:  302:  void ConstructNonNull(const char* buffer, size_t a_length) {
+       10:  303:    char* const str = new char[a_length + 1];
 call    0 returned 100%
-        9:  304:    memcpy(str, buffer, a_length);
-        9:  305:    str[a_length] = '\0';
-        9:  306:    c_str_ = str;
-        9:  307:    length_ = a_length;
-        9:  308:  }
+       10:  304:    memcpy(str, buffer, a_length);
+       10:  305:    str[a_length] = '\0';
+       10:  306:    c_str_ = str;
+       10:  307:    length_ = a_length;
+       10:  308:  }
         -:  309:
         -:  310:  const char* c_str_;
         -:  311:  size_t length_;

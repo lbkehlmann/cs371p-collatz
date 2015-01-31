@@ -220,7 +220,7 @@
         -:  215:// Used to print a value that is not an STL-style container when the
         -:  216:// user doesn't define PrintTo() for it.
         -:  217:template <typename T>
-function _ZN16testing_internal26DefaultPrintNonContainerToIiEEvRKT_PSo called 8 returned 100% blocks executed 50%
+function _ZN16testing_internal26DefaultPrintNonContainerToIiEEvRKT_PSo called 8 returned 100% blocks executed 100%
         8:  218:void DefaultPrintNonContainerTo(const T& value, ::std::ostream* os) {
         -:  219:  // With the following statement, during unqualified name lookup,
         -:  220:  // testing::internal2::operator<< appears as if it was declared in
@@ -339,7 +339,7 @@ call    0 returned 100%
         -:  332:// Used to print a non-container, non-pointer value when the user
         -:  333:// doesn't define PrintTo() for it.
         -:  334:template <typename T>
-function _ZN7testing8internal14DefaultPrintToIiEEvcNS0_13bool_constantILb0EEERKT_PSo called 8 returned 100% blocks executed 50%
+function _ZN7testing8internal14DefaultPrintToIiEEvcNS0_13bool_constantILb0EEERKT_PSo called 8 returned 100% blocks executed 100%
         8:  335:void DefaultPrintTo(IsNotContainer /* dummy */,
         -:  336:                    false_type /* is not a pointer */,
         -:  337:                    const T& value, ::std::ostream* os) {
@@ -359,7 +359,7 @@ call    0 returned 100%
         -:  350:// or there is already a << operator but it doesn't do what the user
         -:  351:// wants).
         -:  352:template <typename T>
-function _ZN7testing8internal7PrintToIiEEvRKT_PSo called 8 returned 0% blocks executed 75%
+function _ZN7testing8internal7PrintToIiEEvRKT_PSo called 8 returned 100% blocks executed 75%
         8:  353:void PrintTo(const T& value, ::std::ostream* os) {
         -:  354:  // DefaultPrintTo() is overloaded.  The type of its first two
         -:  355:  // arguments determine which version will be picked.  If T is an
@@ -385,9 +385,10 @@ function _ZN7testing8internal7PrintToIiEEvRKT_PSo called 8 returned 0% blocks ex
         -:  375:  //   PrintTo(T* x, ...);
         8:  376:  DefaultPrintTo(IsContainerTest<T>(0), is_pointer<T>(), value, os);
 call    0 returned 100%
-call    1 returned 100%
-branch  2 taken 100% (fallthrough)
-branch  3 taken 0% (throw)
+branch  1 taken 100% (fallthrough)
+branch  2 taken 0% (throw)
+call    3 returned 100%
+call    4 never executed
         8:  377:}
         -:  378:
         -:  379:// The following list of PrintTo() overloads tells
@@ -475,11 +476,11 @@ branch  3 taken 0% (throw)
         -:  461:#endif  // GTEST_HAS_GLOBAL_STRING
         -:  462:
         -:  463:GTEST_API_ void PrintStringTo(const ::std::string&s, ::std::ostream* os);
-function _ZN7testing8internal7PrintToERKSsPSo called 1 returned 100% blocks executed 50%
-        1:  464:inline void PrintTo(const ::std::string& s, ::std::ostream* os) {
-        1:  465:  PrintStringTo(s, os);
+function _ZN7testing8internal7PrintToERKSsPSo called 2 returned 100% blocks executed 100%
+        2:  464:inline void PrintTo(const ::std::string& s, ::std::ostream* os) {
+        2:  465:  PrintStringTo(s, os);
 call    0 returned 100%
-        1:  466:}
+        2:  466:}
         -:  467:
         -:  468:// Overloads for ::wstring and ::std::wstring.
         -:  469:#if GTEST_HAS_GLOBAL_WSTRING
@@ -604,9 +605,9 @@ call    0 returned 100%
         -:  588:  // Note: we deliberately don't call this PrintTo(), as that name
         -:  589:  // conflicts with ::testing::internal::PrintTo in the body of the
         -:  590:  // function.
-function _ZN7testing8internal16UniversalPrinterIiE5PrintERKiPSo called 8 returned 100% blocks executed 50%
-function _ZN7testing8internal16UniversalPrinterISsE5PrintERKSsPSo called 1 returned 100% blocks executed 50%
-        9:  591:  static void Print(const T& value, ::std::ostream* os) {
+function _ZN7testing8internal16UniversalPrinterIiE5PrintERKiPSo called 8 returned 100% blocks executed 100%
+function _ZN7testing8internal16UniversalPrinterISsE5PrintERKSsPSo called 2 returned 100% blocks executed 100%
+       10:  591:  static void Print(const T& value, ::std::ostream* os) {
         -:  592:    // By default, ::testing::internal::PrintTo() is used for printing
         -:  593:    // the value.
         -:  594:    //
@@ -615,10 +616,10 @@ function _ZN7testing8internal16UniversalPrinterISsE5PrintERKSsPSo called 1 retur
         -:  597:    // be visible here.  Since it is more specific than the generic ones
         -:  598:    // in ::testing::internal, it will be picked by the compiler in the
         -:  599:    // following statement - exactly what we want.
-        9:  600:    PrintTo(value, os);
+       10:  600:    PrintTo(value, os);
 call    0 returned 100%
 call    1 returned 100%
-        9:  601:  }
+       10:  601:  }
         -:  602:
         -:  603:#ifdef _MSC_VER
         -:  604:# pragma warning(pop)           // Restores the warning state.
@@ -694,13 +695,13 @@ call    1 returned 100%
         -:  674:// (but not the address) is printed; for a (const) char pointer, the
         -:  675:// NUL-terminated string (but not the pointer) is printed.
         -:  676:template <typename T>
-function _ZN7testing8internal19UniversalTersePrintISsEEvRKT_PSo called 1 returned 100% blocks executed 50%
-function _ZN7testing8internal19UniversalTersePrintIiEEvRKT_PSo called 8 returned 100% blocks executed 50%
-        9:  677:void UniversalTersePrint(const T& value, ::std::ostream* os) {
-        9:  678:  UniversalPrint(value, os);
+function _ZN7testing8internal19UniversalTersePrintISsEEvRKT_PSo called 2 returned 100% blocks executed 100%
+function _ZN7testing8internal19UniversalTersePrintIiEEvRKT_PSo called 8 returned 100% blocks executed 100%
+       10:  677:void UniversalTersePrint(const T& value, ::std::ostream* os) {
+       10:  678:  UniversalPrint(value, os);
 call    0 returned 100%
 call    1 returned 100%
-        9:  679:}
+       10:  679:}
         -:  680:inline void UniversalTersePrint(const char* str, ::std::ostream* os) {
         -:  681:  if (str == NULL) {
         -:  682:    *os << "NULL";
@@ -717,13 +718,13 @@ call    1 returned 100%
         -:  693:// (const) char pointer, this prints both the pointer and the
         -:  694:// NUL-terminated string.
         -:  695:template <typename T>
-function _ZN7testing8internal14UniversalPrintIiEEvRKT_PSo called 8 returned 100% blocks executed 50%
-function _ZN7testing8internal14UniversalPrintISsEEvRKT_PSo called 1 returned 100% blocks executed 50%
-        9:  696:void UniversalPrint(const T& value, ::std::ostream* os) {
-        9:  697:  UniversalPrinter<T>::Print(value, os);
+function _ZN7testing8internal14UniversalPrintIiEEvRKT_PSo called 8 returned 100% blocks executed 100%
+function _ZN7testing8internal14UniversalPrintISsEEvRKT_PSo called 2 returned 100% blocks executed 100%
+       10:  696:void UniversalPrint(const T& value, ::std::ostream* os) {
+       10:  697:  UniversalPrinter<T>::Print(value, os);
 call    0 returned 100%
 call    1 returned 100%
-        9:  698:}
+       10:  698:}
         -:  699:
         -:  700:#if GTEST_HAS_TR1_TUPLE
         -:  701:typedef ::std::vector<string> Strings;
@@ -813,36 +814,42 @@ call    1 returned 100%
         -:  785:}  // namespace internal
         -:  786:
         -:  787:template <typename T>
-function _ZN7testing13PrintToStringISsEESsRKT_ called 1 returned 0% blocks executed 73%
-function _ZN7testing13PrintToStringIiEESsRKT_ called 8 returned 0% blocks executed 73%
-        9:  788:::std::string PrintToString(const T& value) {
-        9:  789:  ::std::stringstream ss;
+function _ZN7testing13PrintToStringISsEESsRKT_ called 2 returned 100% blocks executed 70%
+function _ZN7testing13PrintToStringIiEESsRKT_ called 8 returned 100% blocks executed 70%
+       10:  788:::std::string PrintToString(const T& value) {
+       10:  789:  ::std::stringstream ss;
 call    0 returned 100%
-call    1 returned 100%
-branch  2 taken 100% (fallthrough)
-branch  3 taken 0% (throw)
+branch  1 taken 100% (fallthrough)
+branch  2 taken 0% (throw)
+call    3 returned 100%
 call    4 returned 100%
+branch  5 taken 100% (fallthrough)
+branch  6 taken 0% (throw)
+call    7 returned 100%
+       10:  790:  internal::UniversalTersePrint(value, &ss);
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0% (throw)
+call    2 returned 100%
+branch  3 taken 100% (fallthrough)
+branch  4 taken 0% (throw)
 call    5 returned 100%
-branch  6 taken 100% (fallthrough)
-branch  7 taken 0% (throw)
-        9:  790:  internal::UniversalTersePrint(value, &ss);
-call    0 returned 100%
-branch  1 taken 100% (fallthrough)
-branch  2 taken 0% (throw)
-call    3 returned 100%
-branch  4 taken 100% (fallthrough)
-branch  5 taken 0% (throw)
-        9:  791:  return ss.str();
-call    0 returned 100%
-branch  1 taken 100% (fallthrough)
-branch  2 taken 0% (throw)
-call    3 returned 100%
-call    4 never executed
+       10:  791:  return ss.str();
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0% (throw)
+call    2 returned 100%
+branch  3 taken 100% (fallthrough)
+branch  4 taken 0% (throw)
 call    5 returned 100%
-branch  6 taken 100% (fallthrough)
-branch  7 taken 0% (throw)
-call    8 returned 100%
-call    9 never executed
+call    6 never executed
+call    7 never executed
+branch  8 taken 100% (fallthrough)
+branch  9 taken 0% (throw)
+call   10 returned 100%
+branch 11 taken 100% (fallthrough)
+branch 12 taken 0% (throw)
+call   13 returned 100%
+call   14 never executed
+call   15 never executed
         -:  792:}
         -:  793:
         -:  794:}  // namespace testing

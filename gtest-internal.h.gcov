@@ -229,8 +229,8 @@
         -:  224:  return operand1_printer(str);\
         -:  225:}
         -:  226:
-function _ZN7testing8internal33FormatForComparisonFailureMessageEPKcRKSs called 1 returned 100% blocks executed 50%
-        1:  227:GTEST_FORMAT_IMPL_(::std::string, String::ShowCStringQuoted)
+function _ZN7testing8internal33FormatForComparisonFailureMessageEPKcRKSs called 2 returned 100% blocks executed 100%
+        2:  227:GTEST_FORMAT_IMPL_(::std::string, String::ShowCStringQuoted)
 call    0 returned 100%
         -:  228:#if GTEST_HAS_STD_WSTRING
         -:  229:GTEST_FORMAT_IMPL_(::std::wstring, String::ShowWideCStringQuoted)
@@ -516,8 +516,8 @@ call    0 returned 100%
         -:  509:class TestFactoryBase {
         -:  510: public:
 function _ZN7testing8internal15TestFactoryBaseD0Ev called 0 returned 0% blocks executed 0%
-function _ZN7testing8internal15TestFactoryBaseD2Ev called 7 returned 0% blocks executed 50%
-        7:  511:  virtual ~TestFactoryBase() {}
+function _ZN7testing8internal15TestFactoryBaseD2Ev called 13 returned 100% blocks executed 75%
+       13:  511:  virtual ~TestFactoryBase() {}
 call    0 never executed
 call    1 never executed
 branch  2 taken 0% (fallthrough)
@@ -529,8 +529,8 @@ call    4 never executed
         -:  515:  virtual Test* CreateTest() = 0;
         -:  516:
         -:  517: protected:
-function _ZN7testing8internal15TestFactoryBaseC2Ev called 7 returned 100% blocks executed 0%
-        7:  518:  TestFactoryBase() {}
+function _ZN7testing8internal15TestFactoryBaseC2Ev called 13 returned 100% blocks executed 100%
+       13:  518:  TestFactoryBase() {}
         -:  519:
         -:  520: private:
         -:  521:  GTEST_DISALLOW_COPY_AND_ASSIGN_(TestFactoryBase);
@@ -539,28 +539,46 @@ function _ZN7testing8internal15TestFactoryBaseC2Ev called 7 returned 100% blocks
         -:  524:// This class provides implementation of TeastFactoryBase interface.
         -:  525:// It is used in TEST and TEST_F macros.
         -:  526:template <class TestClass>
-function _ZN7testing8internal15TestFactoryImplI17Collatz_read_TestED0Ev called 1 returned 100% blocks executed 67%
-function _ZN7testing8internal15TestFactoryImplI17Collatz_read_TestED2Ev called 1 returned 0% blocks executed 50%
-function _ZN7testing8internal15TestFactoryImplI19Collatz_eval_1_TestED0Ev called 1 returned 100% blocks executed 67%
-function _ZN7testing8internal15TestFactoryImplI19Collatz_eval_1_TestED2Ev called 1 returned 0% blocks executed 50%
-function _ZN7testing8internal15TestFactoryImplI19Collatz_eval_2_TestED0Ev called 1 returned 100% blocks executed 67%
-function _ZN7testing8internal15TestFactoryImplI19Collatz_eval_2_TestED2Ev called 1 returned 0% blocks executed 50%
-function _ZN7testing8internal15TestFactoryImplI19Collatz_eval_3_TestED0Ev called 1 returned 100% blocks executed 67%
-function _ZN7testing8internal15TestFactoryImplI19Collatz_eval_3_TestED2Ev called 1 returned 0% blocks executed 50%
-function _ZN7testing8internal15TestFactoryImplI19Collatz_eval_4_TestED0Ev called 1 returned 100% blocks executed 67%
-function _ZN7testing8internal15TestFactoryImplI19Collatz_eval_4_TestED2Ev called 1 returned 0% blocks executed 50%
-function _ZN7testing8internal15TestFactoryImplI18Collatz_print_TestED0Ev called 1 returned 100% blocks executed 67%
-function _ZN7testing8internal15TestFactoryImplI18Collatz_print_TestED2Ev called 1 returned 0% blocks executed 50%
-function _ZN7testing8internal15TestFactoryImplI18Collatz_solve_TestED0Ev called 1 returned 100% blocks executed 67%
-function _ZN7testing8internal15TestFactoryImplI18Collatz_solve_TestED2Ev called 1 returned 0% blocks executed 50%
-function _ZN7testing8internal15TestFactoryImplI18Collatz_solve_TestEC2Ev called 1 returned 100% blocks executed 50%
-function _ZN7testing8internal15TestFactoryImplI18Collatz_print_TestEC2Ev called 1 returned 100% blocks executed 50%
-function _ZN7testing8internal15TestFactoryImplI19Collatz_eval_4_TestEC2Ev called 1 returned 100% blocks executed 50%
-function _ZN7testing8internal15TestFactoryImplI19Collatz_eval_3_TestEC2Ev called 1 returned 100% blocks executed 50%
-function _ZN7testing8internal15TestFactoryImplI19Collatz_eval_2_TestEC2Ev called 1 returned 100% blocks executed 50%
-function _ZN7testing8internal15TestFactoryImplI19Collatz_eval_1_TestEC2Ev called 1 returned 100% blocks executed 50%
-function _ZN7testing8internal15TestFactoryImplI17Collatz_read_TestEC2Ev called 1 returned 100% blocks executed 50%
-       21:  527:class TestFactoryImpl : public TestFactoryBase {
+function _ZN7testing8internal15TestFactoryImplI19Collatz_read_0_TestED0Ev called 1 returned 100% blocks executed 100%
+function _ZN7testing8internal15TestFactoryImplI19Collatz_read_0_TestED2Ev called 1 returned 100% blocks executed 75%
+function _ZN7testing8internal15TestFactoryImplI19Collatz_read_1_TestED0Ev called 1 returned 100% blocks executed 100%
+function _ZN7testing8internal15TestFactoryImplI19Collatz_read_1_TestED2Ev called 1 returned 100% blocks executed 75%
+function _ZN7testing8internal15TestFactoryImplI19Collatz_read_2_TestED0Ev called 1 returned 100% blocks executed 100%
+function _ZN7testing8internal15TestFactoryImplI19Collatz_read_2_TestED2Ev called 1 returned 100% blocks executed 75%
+function _ZN7testing8internal15TestFactoryImplI19Collatz_eval_1_TestED0Ev called 1 returned 100% blocks executed 100%
+function _ZN7testing8internal15TestFactoryImplI19Collatz_eval_1_TestED2Ev called 1 returned 100% blocks executed 75%
+function _ZN7testing8internal15TestFactoryImplI19Collatz_eval_2_TestED0Ev called 1 returned 100% blocks executed 100%
+function _ZN7testing8internal15TestFactoryImplI19Collatz_eval_2_TestED2Ev called 1 returned 100% blocks executed 75%
+function _ZN7testing8internal15TestFactoryImplI19Collatz_eval_3_TestED0Ev called 1 returned 100% blocks executed 100%
+function _ZN7testing8internal15TestFactoryImplI19Collatz_eval_3_TestED2Ev called 1 returned 100% blocks executed 75%
+function _ZN7testing8internal15TestFactoryImplI19Collatz_eval_4_TestED0Ev called 1 returned 100% blocks executed 100%
+function _ZN7testing8internal15TestFactoryImplI19Collatz_eval_4_TestED2Ev called 1 returned 100% blocks executed 75%
+function _ZN7testing8internal15TestFactoryImplI20Collatz_print_0_TestED0Ev called 1 returned 100% blocks executed 100%
+function _ZN7testing8internal15TestFactoryImplI20Collatz_print_0_TestED2Ev called 1 returned 100% blocks executed 75%
+function _ZN7testing8internal15TestFactoryImplI20Collatz_print_1_TestED0Ev called 1 returned 100% blocks executed 100%
+function _ZN7testing8internal15TestFactoryImplI20Collatz_print_1_TestED2Ev called 1 returned 100% blocks executed 75%
+function _ZN7testing8internal15TestFactoryImplI20Collatz_print_2_TestED0Ev called 1 returned 100% blocks executed 100%
+function _ZN7testing8internal15TestFactoryImplI20Collatz_print_2_TestED2Ev called 1 returned 100% blocks executed 75%
+function _ZN7testing8internal15TestFactoryImplI20Collatz_solve_0_TestED0Ev called 1 returned 100% blocks executed 100%
+function _ZN7testing8internal15TestFactoryImplI20Collatz_solve_0_TestED2Ev called 1 returned 100% blocks executed 75%
+function _ZN7testing8internal15TestFactoryImplI20Collatz_solve_1_TestED0Ev called 1 returned 100% blocks executed 100%
+function _ZN7testing8internal15TestFactoryImplI20Collatz_solve_1_TestED2Ev called 1 returned 100% blocks executed 75%
+function _ZN7testing8internal15TestFactoryImplI20Collatz_solve_2_TestED0Ev called 1 returned 100% blocks executed 100%
+function _ZN7testing8internal15TestFactoryImplI20Collatz_solve_2_TestED2Ev called 1 returned 100% blocks executed 75%
+function _ZN7testing8internal15TestFactoryImplI20Collatz_solve_2_TestEC2Ev called 1 returned 100% blocks executed 100%
+function _ZN7testing8internal15TestFactoryImplI20Collatz_solve_1_TestEC2Ev called 1 returned 100% blocks executed 100%
+function _ZN7testing8internal15TestFactoryImplI20Collatz_solve_0_TestEC2Ev called 1 returned 100% blocks executed 100%
+function _ZN7testing8internal15TestFactoryImplI20Collatz_print_2_TestEC2Ev called 1 returned 100% blocks executed 100%
+function _ZN7testing8internal15TestFactoryImplI20Collatz_print_1_TestEC2Ev called 1 returned 100% blocks executed 100%
+function _ZN7testing8internal15TestFactoryImplI20Collatz_print_0_TestEC2Ev called 1 returned 100% blocks executed 100%
+function _ZN7testing8internal15TestFactoryImplI19Collatz_eval_4_TestEC2Ev called 1 returned 100% blocks executed 100%
+function _ZN7testing8internal15TestFactoryImplI19Collatz_eval_3_TestEC2Ev called 1 returned 100% blocks executed 100%
+function _ZN7testing8internal15TestFactoryImplI19Collatz_eval_2_TestEC2Ev called 1 returned 100% blocks executed 100%
+function _ZN7testing8internal15TestFactoryImplI19Collatz_eval_1_TestEC2Ev called 1 returned 100% blocks executed 100%
+function _ZN7testing8internal15TestFactoryImplI19Collatz_read_2_TestEC2Ev called 1 returned 100% blocks executed 100%
+function _ZN7testing8internal15TestFactoryImplI19Collatz_read_1_TestEC2Ev called 1 returned 100% blocks executed 100%
+function _ZN7testing8internal15TestFactoryImplI19Collatz_read_0_TestEC2Ev called 1 returned 100% blocks executed 100%
+       39:  527:class TestFactoryImpl : public TestFactoryBase {
 call    0 returned 100%
 call    1 returned 100%
 call    2 returned 100%
@@ -606,54 +624,145 @@ call   41 never executed
 call   42 returned 100%
 call   43 returned 100%
 call   44 returned 100%
-call   45 returned 100%
-call   46 returned 100%
-call   47 returned 100%
+branch 45 taken 0% (fallthrough)
+branch 46 taken 100%
+call   47 never executed
 call   48 returned 100%
+call   49 returned 100%
+call   50 returned 100%
+branch 51 taken 0% (fallthrough)
+branch 52 taken 100%
+call   53 never executed
+call   54 returned 100%
+call   55 returned 100%
+call   56 returned 100%
+branch 57 taken 0% (fallthrough)
+branch 58 taken 100%
+call   59 never executed
+call   60 returned 100%
+call   61 returned 100%
+call   62 returned 100%
+branch 63 taken 0% (fallthrough)
+branch 64 taken 100%
+call   65 never executed
+call   66 returned 100%
+call   67 returned 100%
+call   68 returned 100%
+branch 69 taken 0% (fallthrough)
+branch 70 taken 100%
+call   71 never executed
+call   72 returned 100%
+call   73 returned 100%
+call   74 returned 100%
+branch 75 taken 0% (fallthrough)
+branch 76 taken 100%
+call   77 never executed
+call   78 returned 100%
+call   79 returned 100%
+call   80 returned 100%
+call   81 returned 100%
+call   82 returned 100%
+call   83 returned 100%
+call   84 returned 100%
+call   85 returned 100%
+call   86 returned 100%
+call   87 returned 100%
+call   88 returned 100%
+call   89 returned 100%
+call   90 returned 100%
         -:  528: public:
-function _ZN7testing8internal15TestFactoryImplI17Collatz_read_TestE10CreateTestEv called 1 returned 0% blocks executed 67%
-function _ZN7testing8internal15TestFactoryImplI19Collatz_eval_1_TestE10CreateTestEv called 1 returned 0% blocks executed 67%
-function _ZN7testing8internal15TestFactoryImplI19Collatz_eval_2_TestE10CreateTestEv called 1 returned 0% blocks executed 67%
-function _ZN7testing8internal15TestFactoryImplI19Collatz_eval_3_TestE10CreateTestEv called 1 returned 0% blocks executed 67%
-function _ZN7testing8internal15TestFactoryImplI19Collatz_eval_4_TestE10CreateTestEv called 1 returned 0% blocks executed 67%
-function _ZN7testing8internal15TestFactoryImplI18Collatz_print_TestE10CreateTestEv called 1 returned 0% blocks executed 67%
-function _ZN7testing8internal15TestFactoryImplI18Collatz_solve_TestE10CreateTestEv called 1 returned 0% blocks executed 67%
-        7:  529:  virtual Test* CreateTest() { return new TestClass; }
+function _ZN7testing8internal15TestFactoryImplI19Collatz_read_0_TestE10CreateTestEv called 1 returned 100% blocks executed 67%
+function _ZN7testing8internal15TestFactoryImplI19Collatz_read_1_TestE10CreateTestEv called 1 returned 100% blocks executed 67%
+function _ZN7testing8internal15TestFactoryImplI19Collatz_read_2_TestE10CreateTestEv called 1 returned 100% blocks executed 67%
+function _ZN7testing8internal15TestFactoryImplI19Collatz_eval_1_TestE10CreateTestEv called 1 returned 100% blocks executed 67%
+function _ZN7testing8internal15TestFactoryImplI19Collatz_eval_2_TestE10CreateTestEv called 1 returned 100% blocks executed 67%
+function _ZN7testing8internal15TestFactoryImplI19Collatz_eval_3_TestE10CreateTestEv called 1 returned 100% blocks executed 67%
+function _ZN7testing8internal15TestFactoryImplI19Collatz_eval_4_TestE10CreateTestEv called 1 returned 100% blocks executed 67%
+function _ZN7testing8internal15TestFactoryImplI20Collatz_print_0_TestE10CreateTestEv called 1 returned 100% blocks executed 67%
+function _ZN7testing8internal15TestFactoryImplI20Collatz_print_1_TestE10CreateTestEv called 1 returned 100% blocks executed 67%
+function _ZN7testing8internal15TestFactoryImplI20Collatz_print_2_TestE10CreateTestEv called 1 returned 100% blocks executed 67%
+function _ZN7testing8internal15TestFactoryImplI20Collatz_solve_0_TestE10CreateTestEv called 1 returned 100% blocks executed 67%
+function _ZN7testing8internal15TestFactoryImplI20Collatz_solve_1_TestE10CreateTestEv called 1 returned 100% blocks executed 67%
+function _ZN7testing8internal15TestFactoryImplI20Collatz_solve_2_TestE10CreateTestEv called 1 returned 100% blocks executed 67%
+       13:  529:  virtual Test* CreateTest() { return new TestClass; }
 call    0 returned 100%
-call    1 returned 100%
-branch  2 taken 100% (fallthrough)
-branch  3 taken 0% (throw)
+branch  1 taken 100% (fallthrough)
+branch  2 taken 0% (throw)
+call    3 returned 100%
 call    4 never executed
-call    5 returned 100%
+call    5 never executed
 call    6 returned 100%
 branch  7 taken 100% (fallthrough)
 branch  8 taken 0% (throw)
-call    9 never executed
-call   10 returned 100%
-call   11 returned 100%
-branch 12 taken 100% (fallthrough)
-branch 13 taken 0% (throw)
-call   14 never executed
+call    9 returned 100%
+call   10 never executed
+call   11 never executed
+call   12 returned 100%
+branch 13 taken 100% (fallthrough)
+branch 14 taken 0% (throw)
 call   15 returned 100%
-call   16 returned 100%
-branch 17 taken 100% (fallthrough)
-branch 18 taken 0% (throw)
-call   19 never executed
-call   20 returned 100%
+call   16 never executed
+call   17 never executed
+call   18 returned 100%
+branch 19 taken 100% (fallthrough)
+branch 20 taken 0% (throw)
 call   21 returned 100%
-branch 22 taken 100% (fallthrough)
-branch 23 taken 0% (throw)
-call   24 never executed
-call   25 returned 100%
-call   26 returned 100%
-branch 27 taken 100% (fallthrough)
-branch 28 taken 0% (throw)
+call   22 never executed
+call   23 never executed
+call   24 returned 100%
+branch 25 taken 100% (fallthrough)
+branch 26 taken 0% (throw)
+call   27 returned 100%
+call   28 never executed
 call   29 never executed
 call   30 returned 100%
-call   31 returned 100%
-branch 32 taken 100% (fallthrough)
-branch 33 taken 0% (throw)
+branch 31 taken 100% (fallthrough)
+branch 32 taken 0% (throw)
+call   33 returned 100%
 call   34 never executed
+call   35 never executed
+call   36 returned 100%
+branch 37 taken 100% (fallthrough)
+branch 38 taken 0% (throw)
+call   39 returned 100%
+call   40 never executed
+call   41 never executed
+call   42 returned 100%
+branch 43 taken 100% (fallthrough)
+branch 44 taken 0% (throw)
+call   45 returned 100%
+call   46 never executed
+call   47 never executed
+call   48 returned 100%
+branch 49 taken 100% (fallthrough)
+branch 50 taken 0% (throw)
+call   51 returned 100%
+call   52 never executed
+call   53 never executed
+call   54 returned 100%
+branch 55 taken 100% (fallthrough)
+branch 56 taken 0% (throw)
+call   57 returned 100%
+call   58 never executed
+call   59 never executed
+call   60 returned 100%
+branch 61 taken 100% (fallthrough)
+branch 62 taken 0% (throw)
+call   63 returned 100%
+call   64 never executed
+call   65 never executed
+call   66 returned 100%
+branch 67 taken 100% (fallthrough)
+branch 68 taken 0% (throw)
+call   69 returned 100%
+call   70 never executed
+call   71 never executed
+call   72 returned 100%
+branch 73 taken 100% (fallthrough)
+branch 74 taken 0% (throw)
+call   75 returned 100%
+call   76 never executed
+call   77 never executed
         -:  530:};
         -:  531:
         -:  532:#if GTEST_OS_WINDOWS
@@ -1061,7 +1170,7 @@ call   34 never executed
         -:  934:
         -:  935:typedef char IsNotContainer;
         -:  936:template <class C>
-function _ZN7testing8internal15IsContainerTestIiEEcl called 8 returned 100% blocks executed 50%
+function _ZN7testing8internal15IsContainerTestIiEEcl called 8 returned 100% blocks executed 100%
         8:  937:IsNotContainer IsContainerTest(long /* dummy */) { return '\0'; }
         -:  938:
         -:  939:// EnableIf<condition>::type is void when 'Cond' is true, and
