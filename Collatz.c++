@@ -29,36 +29,96 @@ pair<int, int> collatz_read (const string& s) {
     sin >> i >> j;
     return make_pair(i, j);}
 
+
+//------
+// CACHE
+//------
+int cache(int[] cache, int start){
+    if(start < 2){
+	return 1;
+    } else if(start < cache.length() && cache[start] == 0) {
+	//FIND NEW START
+	cache[start] = cache(cache, findNextNum(start)) + 1;
+    } else if(start < cache.length() && cache[start] != 0){
+	return cache[start];
+    } else if( start > cache.length()){
+	cache(cache, steps++, findNextNum(start));
+    }
+    
+}
+
+//--------------
+// Find next num
+//--------------
+
+int findNextNum(int start){
+    if(start % 2 == 0){
+	return start / 2;
+    } else {
+        return start * 3 + 1;
+    }
+}
+
 // ------------
 // collatz_eval
 // ------------
 
 int collatz_eval (int i, int j) {
-    // <your code>
-    assert i >= 1;
-    assert j < 1000000;
+    if(i > j){
+        int temp = i;
+        i = j;
+        j = temp;
+    }
+    assert (i >= 1);
+    assert (j < 1000000);
+    int cache[j + 1];
+    memset(cache, 0, j);
     int steps = 1;
     int max = steps;
     for(int start = i; start <= j; start++) {
-	int k = start;
-	steps = 1;
-	while(k > 1){
-	    if(k % 2 == 0){
-		k = k / 2;
-	    } else {
-		k = 3*k + 1;
-	    }
-	    steps++;
-	}
-	if(steps > max)
-	    max = steps;
-    }    
-    assert max > 0;
+        int k = start;
+        steps = 1;
+        //do calculations!
+	steps = cache(cache, start);
+        if(steps > max)
+            max = steps;
+    }
+    assert (max > 0);
     return max;
 
-//return 1;
+
 }
 
+
+/*
+int collatz_eval (int i, int j) {
+    if(i > j){
+        int temp = i;
+        i = j;
+        j = temp;
+    }
+    assert (i >= 1);
+    assert (j < 1000000);
+    int steps = 1;
+    int max = steps;
+    for(int start = i; start <= j; start++) {
+        int k = start;
+        steps = 1;
+        while(k > 1){
+            if(k % 2 == 0){
+                k = k / 2;
+            } else {
+                k = 3*k + 1;
+            }
+            steps++;
+        }
+        if(steps > max)
+            max = steps;
+    }
+    assert (max > 0);
+    return max;
+}
+*/
 
 // -------------
 // collatz_print
