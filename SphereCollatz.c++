@@ -46,7 +46,7 @@ int findNextNum(int start){
     if(start % 2 == 0){
         return start / 2;
     } else {
-        return start * 3 + 1;
+        return (start * 3 + 1) / 2;
     }
 }
 
@@ -54,6 +54,10 @@ int findNextNum(int start){
 // CACHE
 //------
 int cacheNums(int cache[], int start){
+    int steps = 1;
+    if(start % 2 != 0){
+	steps = 2;
+    }
     if(start < 2){
         return 1;
     } else if(start < LEN && cache[start] != 0){
