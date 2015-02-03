@@ -18,7 +18,7 @@
 
 using namespace std;
 
-const int LEN = 100;
+const int LEN = 1000;
 int cache[LEN];
 
 // ------------
@@ -42,7 +42,7 @@ int findNextNum(int start){
     if(start % 2 == 0){
         return start / 2;
     } else {
-        return start * 3 + 1;
+        return (start * 3 + 1) / 2;
     }
 }
 
@@ -50,18 +50,27 @@ int findNextNum(int start){
 // Cache
 // Caches all numbers with an index in the cache
 //------
-int cacheNums(int cache[], int start){
+int cacheNums(int start){
+    int steps = 1;
+    if(start % 2 != 0){
+        steps = 2;
+    }
     if(start < 2){
 	return 1;
     } else if(start < LEN && cache[start] != 0){
 	return cache[start];
     } else if(start < LEN && cache[start] == 0) {
-	cache[start] = cacheNums(cache, findNextNum(start)) + 1; 
+	cache[start] = cacheNums(findNextNum(start)) + steps; 
 	return cache[start];
     } else {//if( start > len){
-	return cacheNums(cache, findNextNum(start)) + 1;
+	return cacheNums(findNextNum(start)) + steps;
     }
     
+}
+
+//FOR TESTING
+int getCache(int i){
+    return cache[i];
 }
 
 // ------------
@@ -80,7 +89,7 @@ int collatz_eval (int i, int j) {
     int max = steps;
     for(int start = i; start <= j; start++) {
         //do calculations and caching
-	steps = cacheNums(cache, start);
+	steps = cacheNums(start);
         if(steps > max)
             max = steps;
     }

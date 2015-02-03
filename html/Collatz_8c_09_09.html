@@ -93,17 +93,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">pair&lt; int, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Collatz_8c_09_09.html#a2772f8a734aeab48332eb3b282f991ba">collatz_read</a> (const string &amp;s)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Collatz_8c_09_09.html#a3021889635e10aa25b9680d0a91e6f3e">findNextNum</a> (int start)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Collatz_8c_09_09.html#a735700d33d544a707f70d3c45c44284a">cacheNums</a> (int <a class="el" href="SphereCollatz_8c_09_09.html#adec7c1c3db9a99774bc2435f5705ce9c">cache</a>[], int start)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Collatz_8c_09_09.html#a455da9c9a9a3a04d7ee308909cc358d1">cacheNums</a> (int start)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Collatz_8c_09_09.html#a2f5c83e0d5171b20b0ae5fffed01b4cd">getCache</a> (int i)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Collatz_8c_09_09.html#a0b0d3827a619c18aa4d96b8ee8b1c47d">collatz_eval</a> (int i, int j)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Collatz_8c_09_09.html#aeda0b7ea3e40e1e7487ccc436f33a559">collatz_print</a> (ostream &amp;w, int i, int j, int v)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Collatz_8c_09_09.html#a0ac646d2122741f9a9a52201bf9551cc">collatz_solve</a> (istream &amp;r, ostream &amp;w)</td></tr>
 <tr><td colspan="2"><h2><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Collatz_8c_09_09.html#a06ac55907a9e7741cbc2de663ea57c37">LEN</a> = 100</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Collatz_8c_09_09.html#a06ac55907a9e7741cbc2de663ea57c37">LEN</a> = 1000</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Collatz_8c_09_09.html#adec7c1c3db9a99774bc2435f5705ce9c">cache</a> [<a class="el" href="SphereCollatz_8c_09_09.html#a06ac55907a9e7741cbc2de663ea57c37">LEN</a>]</td></tr>
 </table>
 <hr/><h2>Function Documentation</h2>
-<a class="anchor" id="a735700d33d544a707f70d3c45c44284a"></a><!-- doxytag: member="Collatz.c++::cacheNums" ref="a735700d33d544a707f70d3c45c44284a" args="(int cache[], int start)" -->
+<a class="anchor" id="a455da9c9a9a3a04d7ee308909cc358d1"></a><!-- doxytag: member="Collatz.c++::cacheNums" ref="a455da9c9a9a3a04d7ee308909cc358d1" args="(int start)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -111,22 +112,19 @@ Variables</h2></td></tr>
           <td class="memname">int <a class="el" href="SphereCollatz_8c_09_09.html#a735700d33d544a707f70d3c45c44284a">cacheNums</a> </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>cache</em>[], </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"><em>start</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>start</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
+<p>return the number of steps it takes to get through a sequence and cache all those that lead to it </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">start</td><td>is the number we're starting the sequence from </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -287,6 +285,31 @@ Variables</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>find the next number in a 3n+1 problem sequence </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">start</td><td>an int, the number we are calculating from </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a2f5c83e0d5171b20b0ae5fffed01b4cd"></a><!-- doxytag: member="Collatz.c++::getCache" ref="a2f5c83e0d5171b20b0ae5fffed01b4cd" args="(int i)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="Collatz_8h.html#a2f5c83e0d5171b20b0ae5fffed01b4cd">getCache</a> </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>returns the number from the given index from the global cache. For testing purposes. </p>
 
 </div>
 </div>
@@ -309,7 +332,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const int <a class="el" href="SphereCollatz_8c_09_09.html#a06ac55907a9e7741cbc2de663ea57c37">LEN</a> = 100</td>
+          <td class="memname">const int <a class="el" href="SphereCollatz_8c_09_09.html#a06ac55907a9e7741cbc2de663ea57c37">LEN</a> = 1000</td>
         </tr>
       </table>
 </div>
@@ -335,7 +358,7 @@ Variables</h2></td></tr>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Feb 2 2015 20:58:19 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Feb 2 2015 22:01:08 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

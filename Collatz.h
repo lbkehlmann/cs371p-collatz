@@ -52,6 +52,36 @@ int collatz_eval (int i, int j);
  */
 void collatz_print (ostream& w, int i, int j, int v);
 
+//-----------
+//findNextNum
+//-----------
+
+/**find the next number in a 3n+1 problem sequence
+  *@param start  an int, the number we are calculating from
+  */
+
+int findNextNum(int start);
+
+//---------
+//cacheNums
+//---------
+
+/** return the number of steps it takes to get through a sequence and cache all those that lead to it
+  * @param start is the number we're starting the sequence from
+  */
+
+int cacheNums(int start);
+
+//--------
+//getCache
+//--------
+
+/**
+  * returns the number from the given index from the global cache. For testing purposes.
+  */
+
+int getCache(int i);
+
 // -------------
 // collatz_solve
 // -------------

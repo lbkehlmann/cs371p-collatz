@@ -15,7 +15,7 @@
 
 using namespace std;
 
-const int LEN = 100;
+const int LEN = 500000;
 int cache[LEN];
 
 using namespace std;
@@ -55,18 +55,17 @@ int findNextNum(int start){
 //------
 int cacheNums(int cache[], int start){
     int steps = 1;
-    if(start % 2 != 0){
-	steps = 2;
-    }
+    if(start % 2 != 0)
+        steps = 2;
     if(start < 2){
         return 1;
     } else if(start < LEN && cache[start] != 0){
         return cache[start];
     } else if(start < LEN && cache[start] == 0) {
-        cache[start] = cacheNums(cache, findNextNum(start)) + 1;
+        cache[start] = cacheNums(cache, findNextNum(start)) + steps;
         return cache[start];
     } else {//if( start > len){
-        return cacheNums(cache, findNextNum(start)) + 1;
+        return cacheNums(cache, findNextNum(start)) + steps;
     }
 
 }
@@ -117,4 +116,6 @@ int main () {
     collatz_solve(cin, cout);
     return 0;
 }
+
+
 

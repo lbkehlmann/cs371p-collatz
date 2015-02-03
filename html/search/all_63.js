@@ -1,7 +1,7 @@
 var searchData=
 [
   ['cache',['cache',['../Collatz_8c_09_09.html#adec7c1c3db9a99774bc2435f5705ce9c',1,'cache():&#160;Collatz.c++'],['../SphereCollatz_8c_09_09.html#adec7c1c3db9a99774bc2435f5705ce9c',1,'cache():&#160;SphereCollatz.c++']]],
-  ['cachenums',['cacheNums',['../Collatz_8c_09_09.html#a735700d33d544a707f70d3c45c44284a',1,'cacheNums(int cache[], int start):&#160;Collatz.c++'],['../SphereCollatz_8c_09_09.html#a735700d33d544a707f70d3c45c44284a',1,'cacheNums(int cache[], int start):&#160;SphereCollatz.c++']]],
+  ['cachenums',['cacheNums',['../Collatz_8c_09_09.html#a455da9c9a9a3a04d7ee308909cc358d1',1,'cacheNums(int start):&#160;Collatz.c++'],['../Collatz_8h.html#a455da9c9a9a3a04d7ee308909cc358d1',1,'cacheNums(int start):&#160;Collatz.c++'],['../SphereCollatz_8c_09_09.html#a735700d33d544a707f70d3c45c44284a',1,'cacheNums(int cache[], int start):&#160;SphereCollatz.c++']]],
   ['collatz_2ec_2b_2b',['Collatz.c++',['../Collatz_8c_09_09.html',1,'']]],
   ['collatz_2eh',['Collatz.h',['../Collatz_8h.html',1,'']]],
   ['collatz_5feval',['collatz_eval',['../Collatz_8c_09_09.html#a0b0d3827a619c18aa4d96b8ee8b1c47d',1,'collatz_eval(int i, int j):&#160;Collatz.c++'],['../Collatz_8h.html#a0b0d3827a619c18aa4d96b8ee8b1c47d',1,'collatz_eval(int i, int j):&#160;Collatz.c++'],['../SphereCollatz_8c_09_09.html#a0b0d3827a619c18aa4d96b8ee8b1c47d',1,'collatz_eval(int i, int j):&#160;SphereCollatz.c++']]],

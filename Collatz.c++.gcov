@@ -1,0 +1,216 @@
+        -:    0:Source:Collatz.c++
+        -:    0:Graph:Collatz.gcno
+        -:    0:Data:Collatz.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:// ----------------------------
+        -:    2:// projects/collatz/Collatz.c++
+        -:    3:// Copyright (C) 2015
+        -:    4:// Glenn P. Downing
+        -:    5:// ----------------------------
+        -:    6:
+        -:    7:// --------
+        -:    8:// includes
+        -:    9:// --------
+        -:   10:
+        -:   11:#include <cassert>  // assert
+        -:   12:#include <iostream> // endl, istream, ostream
+        -:   13:#include <sstream>  // istringstream
+        -:   14:#include <string>   // getline, string
+        -:   15:#include <utility>  // make_pair, pair
+        -:   16:#include <cstring>
+        -:   17:#include "Collatz.h"
+        -:   18:
+        -:   19:using namespace std;
+        -:   20:
+        -:   21:const int LEN = 1000;
+        -:   22:int cache[LEN];
+        -:   23:
+        -:   24:// ------------
+        -:   25:// collatz_read
+        -:   26:// ------------
+        -:   27:
+function _Z12collatz_readRKSs called 9 returned 100% blocks executed 70%
+        9:   28:pair<int, int> collatz_read (const string& s) {
+        9:   29:    istringstream sin(s);
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0% (throw)
+call    2 returned 100%
+        -:   30:    int i;
+        -:   31:    int j;
+        9:   32:    sin >> i >> j;
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0% (throw)
+call    2 returned 100%
+branch  3 taken 100% (fallthrough)
+branch  4 taken 0% (throw)
+call    5 returned 100%
+        9:   33:    return make_pair(i, j);}
+call    0 returned 100%
+branch  1 taken 100% (fallthrough)
+branch  2 taken 0% (throw)
+call    3 returned 100%
+call    4 never executed
+call    5 never executed
+        -:   34:
+        -:   35:
+        -:   36://--------------
+        -:   37:// Find next num
+        -:   38:// Finds the next number in the sequence
+        -:   39://--------------
+        -:   40:
+function _Z11findNextNumi called 42327164 returned 100% blocks executed 100%
+ 42327164:   41:int findNextNum(int start){
+ 42327164:   42:    if(start % 2 == 0){
+branch  0 taken 50% (fallthrough)
+branch  1 taken 50%
+ 21273484:   43:        return start / 2;
+        -:   44:    } else {
+ 21053680:   45:        return (start * 3 + 1) / 2;
+        -:   46:    }
+        -:   47:}
+        -:   48:
+        -:   49://------
+        -:   50:// Cache
+        -:   51:// Caches all numbers with an index in the cache
+        -:   52://------
+function _Z9cacheNumsi called 43327610 returned 100% blocks executed 100%
+ 43327610:   53:int cacheNums(int start){
+ 43327610:   54:    int steps = 1;
+ 43327610:   55:    if(start % 2 != 0){
+branch  0 taken 50% (fallthrough)
+branch  1 taken 50%
+ 21555864:   56:        steps = 2;
+        -:   57:    }
+ 43327610:   58:    if(start < 2){
+branch  0 taken 1% (fallthrough)
+branch  1 taken 99%
+      440:   59:	return 1;
+ 43327170:   60:    } else if(start < LEN && cache[start] != 0){
+branch  0 taken 2% (fallthrough)
+branch  1 taken 98%
+branch  2 taken 99% (fallthrough)
+branch  3 taken 1%
+  1000008:   61:	return cache[start];
+ 42327162:   62:    } else if(start < LEN && cache[start] == 0) {
+branch  0 taken 1% (fallthrough)
+branch  1 taken 99%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0%
+     1462:   63:	cache[start] = cacheNums(findNextNum(start)) + steps; 
+call    0 returned 100%
+call    1 returned 100%
+     1462:   64:	return cache[start];
+        -:   65:    } else {//if( start > len){
+ 42325700:   66:	return cacheNums(findNextNum(start)) + steps;
+call    0 returned 100%
+call    1 returned 100%
+        -:   67:    }
+        -:   68:    
+        -:   69:}
+        -:   70:
+        -:   71://FOR TESTING
+function _Z8getCachei called 3 returned 100% blocks executed 100%
+        3:   72:int getCache(int i){
+        3:   73:    return cache[i];
+        -:   74:}
+        -:   75:
+        -:   76:// ------------
+        -:   77:// collatz_eval
+        -:   78:// ------------
+        -:   79:
+function _Z12collatz_evalii called 10 returned 100% blocks executed 81%
+       10:   80:int collatz_eval (int i, int j) {
+       10:   81:    if(i > j){
+branch  0 taken 10% (fallthrough)
+branch  1 taken 90%
+        1:   82:        int temp = i;
+        1:   83:        i = j;
+        1:   84:        j = temp;
+        -:   85:    }
+       10:   86:    assert (i >= 1);
+branch  0 taken 0% (fallthrough)
+branch  1 taken 100%
+call    2 never executed
+       10:   87:    assert (j < 1000000);
+branch  0 taken 0% (fallthrough)
+branch  1 taken 100%
+call    2 never executed
+       10:   88:    int steps = 1;
+       10:   89:    int max = steps;
+  1000455:   90:    for(int start = i; start <= j; start++) {
+branch  0 taken 99%
+branch  1 taken 1% (fallthrough)
+        -:   91:        //do calculations and caching
+  1000445:   92:	steps = cacheNums(start);
+call    0 returned 100%
+  1000445:   93:        if(steps > max)
+branch  0 taken 1% (fallthrough)
+branch  1 taken 99%
+       81:   94:            max = steps;
+        -:   95:    }
+       10:   96:    assert (max > 0);
+branch  0 taken 0% (fallthrough)
+branch  1 taken 100%
+call    2 never executed
+       10:   97:    return max;
+        -:   98:}
+        -:   99:
+        -:  100:// -------------
+        -:  101:// collatz_print
+        -:  102:// -------------
+        -:  103:
+function _Z13collatz_printRSoiii called 9 returned 100% blocks executed 100%
+        9:  104:void collatz_print (ostream& w, int i, int j, int v) {
+        9:  105:    w << i << " " << j << " " << v << endl;}
+call    0 returned 100%
+call    1 returned 100%
+call    2 returned 100%
+call    3 returned 100%
+call    4 returned 100%
+call    5 returned 100%
+        -:  106:
+        -:  107:// -------------
+        -:  108:// collatz_solve
+        -:  109:// -------------
+        -:  110:
+function _Z13collatz_solveRSiRSo called 3 returned 100% blocks executed 73%
+        3:  111:void collatz_solve (istream& r, ostream& w) {
+        3:  112:    string s;
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0% (throw)
+call    2 returned 100%
+        3:  113:    memset(cache, 0, LEN);
+       12:  114:    while (getline(r, s)) {
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0% (throw)
+call    2 returned 100%
+branch  3 taken 100% (fallthrough)
+branch  4 taken 0% (throw)
+call    5 returned 100%
+branch  6 taken 67%
+branch  7 taken 33% (fallthrough)
+        6:  115:        const pair<int, int> p = collatz_read(s);
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0% (throw)
+call    2 returned 100%
+        6:  116:        const int            i = p.first;
+        6:  117:        const int            j = p.second;
+        6:  118:        const int            v = collatz_eval(i, j);
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0% (throw)
+call    2 returned 100%
+function _GLOBAL__sub_I_cache called 1 returned 100% blocks executed 100%
+function _Z41__static_initialization_and_destruction_0ii called 1 returned 100% blocks executed 100%
+       12:  119:        collatz_print(w, i, j, v);}}
+call    0 returned 100%
+branch  1 taken 100% (fallthrough)
+branch  2 taken 0%
+branch  3 taken 100% (fallthrough)
+branch  4 taken 0%
+branch  5 taken 100% (fallthrough)
+branch  6 taken 0% (throw)
+call    7 returned 100%
+call    8 returned 100%
+call    9 never executed
+call   10 never executed

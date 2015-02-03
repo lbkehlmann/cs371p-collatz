@@ -25,6 +25,48 @@ using namespace std;
 // TestCollatz
 // -----------
 
+//-----------
+//findNextNum
+//-----------
+
+TEST(Collatz, find_0){
+    int i = findNextNum(100);
+    ASSERT_EQ(i, 50);    
+}
+
+TEST(Collatz, find_1){
+    int i = findNextNum(5);
+    ASSERT_EQ(i, 8);
+}
+
+TEST(Collatz, find_2){
+    int i = 2;
+    ASSERT_EQ(i, 2);
+}
+
+//---------
+//CacheNums
+//---------
+
+TEST(Collatz, cache_0){
+    cacheNums(10);
+    int n = getCache(4);    
+    ASSERT_EQ(n, 3);
+}
+
+
+TEST(Collatz, cache_1){
+    cacheNums(10);
+    int n = getCache(10);
+    ASSERT_EQ(n, 7);
+}
+
+TEST(Collatz, cache_2){
+    cacheNums(3);
+    int n = getCache(5);
+    ASSERT_EQ(n, 6);
+}
+
 // ----
 // read
 // ----
