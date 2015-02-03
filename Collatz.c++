@@ -13,10 +13,13 @@
 #include <sstream>  // istringstream
 #include <string>   // getline, string
 #include <utility>  // make_pair, pair
-
+#include <cstring>
 #include "Collatz.h"
 
 using namespace std;
+
+const int LEN = 100;
+int cache[LEN];
 
 // ------------
 // collatz_read
@@ -30,33 +33,33 @@ pair<int, int> collatz_read (const string& s) {
     return make_pair(i, j);}
 
 
-//------
-// CACHE
-//------
-int cache(int[] cache, int start){
-    if(start < 2){
-	return 1;
-    } else if(start < cache.length() && cache[start] == 0) {
-	//FIND NEW START
-	cache[start] = cache(cache, findNextNum(start)) + 1;
-    } else if(start < cache.length() && cache[start] != 0){
-	return cache[start];
-    } else if( start > cache.length()){
-	cache(cache, steps++, findNextNum(start));
-    }
-    
-}
-
 //--------------
 // Find next num
 //--------------
 
 int findNextNum(int start){
     if(start % 2 == 0){
-	return start / 2;
+        return start / 2;
     } else {
         return start * 3 + 1;
     }
+}
+
+//------
+// CACHE
+//------
+int cacheNums(int cache[], int start){
+    if(start < 2){
+	return 1;
+    } else if(start < LEN && cache[start] != 0){
+	return cache[start];
+    } else if(start < LEN && cache[start] == 0) {
+	cache[start] = cacheNums(cache, findNextNum(start)) + 1; 
+	return cache[start];
+    } else {//if( start > len){
+	return cacheNums(cache, findNextNum(start)) + 1;
+    }
+    
 }
 
 // ------------
@@ -71,15 +74,11 @@ int collatz_eval (int i, int j) {
     }
     assert (i >= 1);
     assert (j < 1000000);
-    int cache[j + 1];
-    memset(cache, 0, j);
     int steps = 1;
     int max = steps;
     for(int start = i; start <= j; start++) {
-        int k = start;
-        steps = 1;
         //do calculations!
-	steps = cache(cache, start);
+	steps = cacheNums(cache, start);
         if(steps > max)
             max = steps;
     }
@@ -133,6 +132,7 @@ void collatz_print (ostream& w, int i, int j, int v) {
 
 void collatz_solve (istream& r, ostream& w) {
     string s;
+    memset(cache, 0, LEN);
     while (getline(r, s)) {
         const pair<int, int> p = collatz_read(s);
         const int            i = p.first;
