@@ -1,0 +1,72 @@
+commit 9d7db96b38e4baf95d28bba671639d895a244fd4
+Author: Lindsey Kehlmann <kehlmann@cs.utexas.edu>
+Date:   Mon Feb 2 20:59:05 2015 -0600
+
+    ran doxygen and inline comments added
+
+commit 9e96101d1afc60f9cf1770f42051dbb67f21cc40
+Author: Lindsey Kehlmann <kehlmann@cs.utexas.edu>
+Date:   Mon Feb 2 20:46:13 2015 -0600
+
+    adds working SPOJ file
+
+commit 8d8d63447ef8e1d24539577ce98e6934bc6d0bf1
+Author: Lindsey Kehlmann <kehlmann@cs.utexas.edu>
+Date:   Mon Feb 2 20:38:15 2015 -0600
+
+    adds working simple cache solution
+
+commit 52fb022bbcf19a4c6bdaa53ea5d30b06b9badd8a
+Merge: 4b92e2b e5096ab
+Author: Lindsey Kehlmann <kehlmann@cs.utexas.edu>
+Date:   Mon Feb 2 17:26:32 2015 -0600
+
+    who knows
+
+commit e5096ab725b51621993d2bcda416f15a10aa9708
+Author: Lindsey Kehlmann <kehlmann@cs.utexas.edu>
+Date:   Mon Feb 2 17:21:54 2015 -0600
+
+    adds acceptance tests
+
+commit 4b92e2b95ca63e10701aa4dc710f831d96547a6b
+Author: Lindsey Kehlmann <kehlmann@cs.utexas.edu>
+Date:   Sat Jan 31 15:30:33 2015 -0600
+
+    adds SphereCollatz file accepted by SPOJ
+
+commit d4314e80887aaeea76b95fbb31fe01f8a26124a8
+Author: Lindsey Kehlmann <kehlmann@cs.utexas.edu>
+Date:   Mon Feb 2 13:30:56 2015 -0600
+
+    begin caching code
+
+commit 87948898e75888591182d65c1afcc1ae174f7da8
+Author: Lindsey Kehlmann <kehlmann@cs.utexas.edu>
+Date:   Sat Jan 31 15:30:33 2015 -0600
+
+    adds SphereCollatz file accepted by SPOJ
+
+commit 887e7cad3dc0709e474239a61629628add5ebf38
+Author: Lindsey Kehlmann <kehlmann@cs.utexas.edu>
+Date:   Sat Jan 31 14:45:12 2015 -0600
+
+    fixes a few assertions
+
+commit 53b067afe870165ca583b212c650d987ac937403
+Author: Lindsey Kehlmann <kehlmann@cs.utexas.edu>
+Date:   Sat Jan 31 14:39:30 2015 -0600
+
+    implements naive solution
+
+commit 322256af58066b83f8ff49624023ff7eced40545
+Author: Lindsey Kehlmann <kehlmann@cs.utexas.edu>
+Date:   Sat Jan 31 14:01:47 2015 -0600
+
+    adds more unit tests
+
+commit bcf97992140a6c4caad60738eee5be08adfab8f8
+Author: Lindsey Kehlmann <kehlmann@cs.utexas.edu>
+Date:   Sat Jan 31 12:53:55 2015 -0600
+
+    creating repo
